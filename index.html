@@ -22,19 +22,32 @@
   <body class="font-body">
     <!-- Navbar -->
     <nav class="navbar fixed w-full z-50 py-4">
-      <div class="container mx-auto px-6 flex justify-between items-center">
+      <div class="container mx-auto px-10 flex justify-between items-center">
         <div class="flex items-center">
           <span class="logo-text text-white text-2xl font-bold font-heading">Sayf El Falah</span>
         </div>
 
-        <!-- Desktop Menu -->
         <div class="hidden md:flex space-x-8">
           <a href="#" class="nav-link text-white hover:text-primary transition">Home</a>
+          <div class="relative group">
+            <button
+              class="nav-link text-white hover:text-primary transition focus:outline-none flex items-center"
+              id="dropdown-btn-desktop"
+            >
+              Program Selfa <i class="fas fa-chevron-down ml-2 text-xs transition-transform duration-300"></i>
+            </button>
+            <div
+              id="dropdown-menu-desktop"
+              class="absolute left-0 mt-2 w-40 bg-white rounded-md shadow-lg py-2 z-20 opacity-0 -translate-y-4 pointer-events-none transition-all duration-300"
+            >
+              <a href="#kb-tk" class="block px-4 py-2 text-sm text-secondary hover:bg-gray-100 hover:text-primary">KB & TK Selfa</a>
+              <a href="#sd-alam" class="block px-4 py-2 text-sm text-secondary hover:bg-gray-100 hover:text-primary">SD Alam Selfa</a>
+              <a href="#ponpes" class="block px-4 py-2 text-sm text-secondary hover:bg-gray-100 hover:text-primary">Pondok Pesantren</a>
+            </div>
+          </div>
           <a href="#about" class="nav-link text-white hover:text-primary transition">About Us</a>
-          <a href="#program" class="nav-link text-white hover:text-primary transition">Program Selfa</a>
         </div>
 
-        <!-- Mobile Menu Button -->
         <div class="md:hidden">
           <button id="menu-btn" class="text-white focus:outline-none">
             <i class="fas fa-bars text-xl"></i>
@@ -42,11 +55,24 @@
         </div>
       </div>
 
-      <!-- Mobile Menu -->
-      <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-6 absolute top-full left-0 w-full shadow-lg">
+      <div
+        id="mobile-menu"
+        class="md:hidden bg-white py-4 px-6 absolute top-full left-0 w-full shadow-lg transition-all duration-300 ease-in-out opacity-0 -translate-y-4 pointer-events-none"
+      >
         <a href="#" class="block py-2 text-secondary hover:text-primary">Home</a>
         <a href="#about" class="block py-2 text-secondary hover:text-primary">About Us</a>
-        <a href="#program" class="block py-2 text-secondary hover:text-primary">Program Selfa</a>
+
+        <button
+          class="block w-full text-left py-2 text-secondary hover:text-primary transition focus:outline-none"
+          id="dropdown-btn-mobile"
+        >
+          Program Selfa <i class="fas fa-chevron-down ml-2 text-xs transition-transform duration-300"></i>
+        </button>
+        <div id="dropdown-menu-mobile" class="hidden pl-4 py-2 space-y-2">
+          <a href="#kb-tk" class="block text-secondary hover:text-primary">KB & TK Selfa</a>
+          <a href="#sd-alam" class="block text-secondary hover:text-primary">SD Alam Selfa</a>
+          <a href="#ponpes" class="block text-secondary hover:text-primary">Pondok Pesantren</a>
+        </div>
       </div>
     </nav>
 
@@ -174,90 +200,62 @@
     <section id="program" class="py-16 md:py-24 bg-slate-50">
       <div class="container mx-auto px-4">
         <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold font-heading text-center text-secondary mb-10" data-aos="fade-up">
-            Program Sayf El Falah
-          </h2>
-          <p class="text-gray-700 mb-6">
-            Sayf El Falah adalah sebuah yayasan pendidikan yang berdedikasi untuk menciptakan generasi terbaik melalui kurikulum yang
-            terintegrasi dan berfokus pada fitrah anak, dari usia dini hingga remaja.
+          <h2 class="text-3xl md:text-4xl font-bold font-heading text-secondary mb-4" data-aos="fade-up">Program Sayf El Falah</h2>
+          <div class="w-20 h-1 bg-primary mx-auto mb-6" data-aos="fade-up" data-aos-delay="100"></div>
+          <p class="text-lg text-gray-700 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+            Sayf El Falah adalah yayasan pendidikan yang berdedikasi untuk menciptakan generasi terbaik melalui kurikulum yang terintegrasi
+            dan berfokus pada fitrah anak.
           </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div
-            class="program-card bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl border-l-4 border-primary hover:border-secondary"
+          <a
+            href="/kb-tk"
+            class="program-card bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl border-l-4 border-primary hover:border-secondary flex flex-col justify-between"
             data-aos="fade-up"
             data-aos-duration="800"
             data-aos-delay="300"
           >
-            <div class="p-6">
-              <div class="flex items-center mb-4">
-                <div class="w-12 h-12 rounded-full bg-primary bg-opacity-20 flex items-center justify-center mr-4">
-                  <i class="fas fa-hat-cowboy text-primary text-xl"></i>
-                </div>
-                <h3 class="text-xl font-bold text-secondary">KB & TK Selfa</h3>
+            <div class="p-6 text-center flex flex-col items-center">
+              <div class="w-24 h-24 rounded-full bg-primary bg-opacity-20 flex items-center justify-center mb-4">
+                <img src="/image/logo-tk.png" alt="Logo KB & TK Selfa" class="w-16 h-16 object-contain" />
               </div>
-              <p class="text-text mb-4 font-sans">
-                Membangun fondasi Islami dan karakter anak melalui pembelajaran yang menyenangkan, mengintegrasikan aktivitas sehari-hari
-                dengan nilai-nilai luhur.
-              </p>
-              <ul class="space-y-2 text-sm text-text font-sans">
-                <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Pembentukan karakter Islami</li>
-                <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Pengalaman belajar yang interaktif</li>
-                <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Menjadikan Nabi sebagai teladan</li>
-              </ul>
+              <h3 class="text-2xl font-bold text-secondary mb-2">KB & TK Selfa</h3>
+              <p class="text-sm text-gray-600 font-sans">Membangun fondasi Islami dan karakter anak.</p>
             </div>
-          </div>
+          </a>
 
-          <div
-            class="program-card bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl border-l-4 border-primary hover:border-secondary"
+          <a
+            href="/sd-alam"
+            class="program-card bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl border-l-4 border-primary hover:border-secondary flex flex-col justify-between"
             data-aos="fade-up"
             data-aos-duration="800"
             data-aos-delay="400"
           >
-            <div class="p-6">
-              <div class="flex items-center mb-4">
-                <div class="w-12 h-12 rounded-full bg-primary bg-opacity-20 flex items-center justify-center mr-4">
-                  <i class="fas fa-leaf text-primary text-xl"></i>
-                </div>
-                <h3 class="text-xl font-bold text-secondary">SD Alam Selfa</h3>
+            <div class="p-6 text-center flex flex-col items-center">
+              <div class="w-24 h-24 rounded-full bg-primary bg-opacity-20 flex items-center justify-center mb-4">
+                <img src="/image/icon-sd-selfa.png" alt="Logo SD Alam Selfa" class="w-16 h-16 object-contain" />
               </div>
-              <p class="text-text mb-4 font-sans">
-                Mengajak anak kembali menyatu dengan alam sebagai sumber pembelajaran utama. Kami fokus pada pengembangan utuh lahir dan
-                batin, melampaui batasan angka-angka.
-              </p>
-              <ul class="space-y-2 text-sm text-text font-sans">
-                <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Pembelajaran berbasis alam</li>
-                <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Pengembangan akal dan fisik</li>
-                <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Metode yang interaktif dan holistik</li>
-              </ul>
+              <h3 class="text-2xl font-bold text-secondary mb-2">SD Alam Selfa</h3>
+              <p class="text-sm text-gray-600 font-sans">Pembelajaran yang terintegrasi dengan alam.</p>
             </div>
-          </div>
+          </a>
 
-          <div
-            class="program-card bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl border-l-4 border-primary hover:border-secondary"
+          <a
+            href="/pondok-pesantren"
+            class="program-card bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl border-l-4 border-primary hover:border-secondary flex flex-col justify-between"
             data-aos="fade-up"
             data-aos-duration="800"
             data-aos-delay="500"
           >
-            <div class="p-6">
-              <div class="flex items-center mb-4">
-                <div class="w-12 h-12 rounded-full bg-primary bg-opacity-20 flex items-center justify-center mr-4">
-                  <i class="fas fa-quran text-primary text-xl"></i>
-                </div>
-                <h3 class="text-xl font-bold text-secondary">Pondok Pesantren</h3>
+            <div class="p-6 text-center flex flex-col items-center">
+              <div class="w-24 h-24 rounded-full bg-primary bg-opacity-20 flex items-center justify-center mb-4">
+                <img src="/image/logo-tk.png" alt="Logo Pondok Pesantren" class="w-16 h-16 object-contain" />
               </div>
-              <p class="text-text mb-4 font-sans">
-                Mencetak generasi pemimpin yang menguasai ilmu agama dan modern secara seimbang. Program ini menguatkan akidah dan akhlak
-                mulia.
-              </p>
-              <ul class="space-y-2 text-sm text-text font-sans">
-                <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Pembinaan akidah dan akhlak</li>
-                <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Penguasaan ilmu agama dan sains</li>
-                <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Menyiapkan pemimpin masa depan</li>
-              </ul>
+              <h3 class="text-2xl font-bold text-secondary mb-2">Pondok Pesantren</h3>
+              <p class="text-sm text-gray-600 font-sans">Mencetak generasi pemimpin Islami.</p>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </section>
@@ -510,8 +508,23 @@
       });
 
       // Mobile menu toggle
-      document.getElementById("menu-btn").addEventListener("click", function () {
-        document.getElementById("mobile-menu").classList.toggle("hidden");
+      document.getElementById("menu-btn").addEventListener("click", function (event) {
+        event.stopPropagation(); // Mencegah event klik menyebar ke dokumen
+        const mobileMenu = document.getElementById("mobile-menu");
+        const dropdownMenuMobile = document.getElementById("dropdown-menu-mobile");
+
+        // Toggle kelas untuk animasi menu utama
+        mobileMenu.classList.toggle("opacity-0");
+        mobileMenu.classList.toggle("-translate-y-4");
+
+        // Toggle pointer-events
+        if (mobileMenu.classList.contains("opacity-0")) {
+          mobileMenu.classList.add("pointer-events-none");
+          // Tutup dropdown jika menu utama ditutup
+          dropdownMenuMobile.classList.add("hidden");
+        } else {
+          mobileMenu.classList.remove("pointer-events-none");
+        }
       });
 
       // Navbar scroll effect
@@ -523,52 +536,46 @@
           navbar.classList.remove("scrolled");
         }
       });
-      // Tambahkan event listener untuk mendeteksi klik di seluruh dokumen
+
+      // Logika untuk dropdown desktop
+      document.getElementById("dropdown-btn-desktop").addEventListener("click", function (event) {
+        event.preventDefault();
+        const dropdownMenu = document.getElementById("dropdown-menu-desktop");
+        dropdownMenu.classList.toggle("opacity-0");
+        dropdownMenu.classList.toggle("-translate-y-4");
+        dropdownMenu.classList.toggle("pointer-events-none");
+      });
+
+      // Logika untuk dropdown mobile
+      document.getElementById("dropdown-btn-mobile").addEventListener("click", function (event) {
+        event.preventDefault();
+        const dropdownMenu = document.getElementById("dropdown-menu-mobile");
+        dropdownMenu.classList.toggle("hidden");
+      });
+
+      // Event listener untuk menutup menu mobile dan dropdown saat klik di luar
       document.addEventListener("click", function (event) {
         const mobileMenu = document.getElementById("mobile-menu");
         const menuBtn = document.getElementById("menu-btn");
+        const dropdownMenuDesktop = document.getElementById("dropdown-menu-desktop");
+        const dropdownBtnDesktop = document.getElementById("dropdown-btn-desktop");
 
-        // Periksa apakah menu mobile terbuka dan klik tidak terjadi di dalam menu atau tombol menu
         const isClickInsideMenu = mobileMenu.contains(event.target);
         const isClickInsideMenuBtn = menuBtn.contains(event.target);
+        const isClickInsideDropdownDesktop = dropdownMenuDesktop.contains(event.target) || dropdownBtnDesktop.contains(event.target);
 
-        if (!mobileMenu.classList.contains("hidden") && !isClickInsideMenu && !isClickInsideMenuBtn) {
-          // Jika menu terbuka dan klik di luar, sembunyikan menu
-          mobileMenu.classList.add("hidden");
+        // Tutup menu mobile jika klik di luar area menu dan tombolnya
+        if (!mobileMenu.classList.contains("opacity-0") && !isClickInsideMenu && !isClickInsideMenuBtn) {
+          mobileMenu.classList.add("opacity-0", "-translate-y-4", "pointer-events-none");
+          // Pastikan dropdown mobile juga tertutup saat menu utama ditutup
+          document.getElementById("dropdown-menu-mobile").classList.add("hidden");
+        }
+
+        // Tutup dropdown desktop jika klik di luar area dropdown
+        if (!dropdownMenuDesktop.classList.contains("opacity-0") && !isClickInsideDropdownDesktop) {
+          dropdownMenuDesktop.classList.add("opacity-0", "-translate-y-4", "pointer-events-none");
         }
       });
-
-      // Counter animation for statistics
-      function animateCounter() {
-        const counters = document.querySelectorAll(".stat-number");
-        const speed = 200;
-
-        counters.forEach((counter) => {
-          const target = +counter.getAttribute("data-count");
-          const count = +counter.innerText;
-          const increment = Math.ceil(target / speed);
-
-          if (count < target) {
-            counter.innerText = Math.min(count + increment, target);
-            setTimeout(() => animateCounter(counter), 1);
-          }
-        });
-      }
-
-      // Initialize counter when statistics section is in view
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              animateCounter();
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.5 }
-      );
-
-      observer.observe(document.querySelector(".bg-primary"));
     </script>
   </body>
 </html>

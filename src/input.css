@@ -7,6 +7,31 @@ body {
   overflow-x: hidden;
 }
 
+.navbar {
+  transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.scrolled .nav-link {
+  color: #1a365d;
+}
+
+/* Tambahkan kode ini */
+.navbar.scrolled .logo-text,
+.navbar.scrolled #menu-btn i,
+.navbar.scrolled #dropdown-btn-desktop,
+.navbar.scrolled #dropdown-btn-desktop i {
+  color: #00ab66;
+}
+
+.navbar.scrolled .logo-text {
+  color: #00ab66;
+}
+
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/image/selfa.jpg");
   background-size: cover;
@@ -33,27 +58,5 @@ body {
 .stat-number {
   font-size: 3.5rem;
   font-weight: 700;
-  color: #00ab66;
-}
-.navbar {
-  transition: background-color 0.3s ease;
-}
-
-.navbar.scrolled {
-  background-color: white;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.navbar.scrolled .nav-link {
-  color: #1a365d;
-}
-
-/* Tambahkan kode ini */
-.navbar.scrolled .logo-text,
-.navbar.scrolled #menu-btn i {
-  color: #00ab66;
-}
-
-.navbar.scrolled .logo-text {
   color: #00ab66;
 }
