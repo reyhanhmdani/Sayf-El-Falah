@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sekolah Sayf El Falah</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="./src/output.css" />
+  </head>
+  <body class="font-body">
+    <!-- Navbar -->
+    <nav class="navbar fixed w-full z-50 py-4">
+      <div class="container mx-auto px-6 flex justify-between items-center">
+        <div class="flex items-center">
+          <span class="logo-text text-white text-2xl font-bold font-heading">Sayf El Falah</span>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-8">
+          <a href="#" class="nav-link text-white hover:text-primary transition">Home</a>
+          <a href="#about" class="nav-link text-white hover:text-primary transition">About Us</a>
+          <a href="#program" class="nav-link text-white hover:text-primary transition">Program Selfa</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-white focus:outline-none">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-6 absolute top-full left-0 w-full shadow-lg">
+        <a href="#" class="block py-2 text-secondary hover:text-primary">Home</a>
+        <a href="#about" class="block py-2 text-secondary hover:text-primary">About Us</a>
+        <a href="#program" class="block py-2 text-secondary hover:text-primary">Program Selfa</a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+      <div class="container mx-auto px-6 text-center text-white" data-aos="fade-up">
+        <h1 class="text-4xl md:text-6xl font-bold font-heading mb-4">Selamat Datang di Sekolah Sayf El Falah</h1>
+        <p class="text-xl md:text-2xl mb-8">Membentuk Generasi Unggul, Berkarakter, dan Berprestasi</p>
+        <a
+          href="#program"
+          class="bg-primary hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105"
+        >
+          Program Kita
+        </a>
+      </div>
+    </header>
+
+    <!-- Visi & Misi Section -->
+    <section id="visimisi" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold font-heading text-center text-secondary mb-16" data-aos="fade-up">Visi & Misi Sekolah</h2>
+
+        <div class="grid md:grid-cols-2 gap-12">
+          <!-- Visi -->
+          <div class="bg-white p-8 rounded-lg shadow-lg" data-aos="fade-right">
+            <div class="text-center mb-6">
+              <i class="fas fa-eye text-4xl text-primary"></i>
+            </div>
+            <h3 class="text-2xl font-bold font-heading text-secondary mb-4 text-center">Visi Kami</h3>
+            <p class="text-gray-700 text-lg">
+              Membangun lingkungan pembelajaran paling ideal yang Islami, mutakhir, menyenangkan, dan terintegrasi dengan aktivitas
+              kehidupan. Kami ingin membantu setiap anak tumbuh menjadi manusia utuh yang mampu menjadi pemimpin dan rahmat bagi dunia,
+              sesuai dengan ajaran Allah Ta’ala dan Rasulullah shallallahu alaihi wa sallam.
+            </p>
+          </div>
+
+          <!-- Misi -->
+          <div class="bg-white p-8 rounded-lg shadow-lg" data-aos="fade-left">
+            <div class="text-center mb-6">
+              <i class="fas fa-bullseye text-4xl text-primary"></i>
+            </div>
+            <h3 class="text-2xl font-bold font-heading text-secondary mb-4 text-center">Misi Kami</h3>
+            <ul class="text-gray-700 space-y-3">
+              <li class="flex items-start">
+                <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                <span>Membiasakan perilaku Islami dalam kehidupan sehari-hari anak-anak sesuai dengan Al-Qur'an dan As-Sunnah.</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                <span>Melaksanakan pembelajaran yang interaktif dan inovatif sesuai dengan perkembangan anak.</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                <span>Menjadikan Para Nabi sebagai teladan utama (role model) bagi anak-anak dalam setiap aspek kehidupan.</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                <span
+                  >Menyediakan metode pembelajaran yang komprehensif untuk mengembangkan seluruh aspek dasar manusia, meliputi akal, rasa,
+                  fisik, mental, dan sosial.</span
+                >
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                <span
+                  >Menjadi lingkungan tumbuh terbaik bagi anak-anak di masa keemasannya dengan memberikan beragam pengalaman kehidupan yang
+                  dibutuhkan di masa depan..</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold font-heading text-center text-secondary mb-16" data-aos="fade-up">
+          Tentang Sekolah Sayf El Falah
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div data-aos="fade-right">
+            <img
+              src="https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Gedung Sekolah Sayf El Falah"
+              class="rounded-lg shadow-lg"
+            />
+          </div>
+
+          <div data-aos="fade-left">
+            <h3 class="text-2xl font-bold font-heading text-secondary mb-4">Sejarah Singkat</h3>
+            <p class="text-gray-700 mb-6">
+              Sayf El Falah adalah sebuah yayasan pendidikan yang didirikan di atas keyakinan kuat bahwa setiap anak memiliki potensi unik
+              yang harus dikembangkan sesuai dengan fitrahnya. Kami tidak hanya berkomitmen pada pendidikan formal, tetapi juga berfokus
+              pada pembentukan karakter, kepemimpinan, dan kecintaan pada ilmu pengetahuan.
+            </p>
+
+            <h3 class="text-2xl font-bold font-heading text-secondary mb-4">Keunggulan Kami</h3>
+            <ul class="text-gray-700 space-y-3">
+              <li class="flex items-start">
+                <i class="fas fa-star text-accent mt-1 mr-3"></i>
+                <span>Guru berkualitas dan berpengalaman</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-star text-accent mt-1 mr-3"></i>
+                <span>Fasilitas pembelajaran lengkap dan modern</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-star text-accent mt-1 mr-3"></i>
+                <span>Kurikulum terpadu nasional dan islami</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-star text-accent mt-1 mr-3"></i>
+                <span>Lingkungan belajar yang nyaman dan kondusif</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Program Selfa Section -->
+    <section id="program" class="py-16 md:py-24 bg-slate-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold font-heading text-center text-secondary mb-10" data-aos="fade-up">
+            Program Sayf El Falah
+          </h2>
+          <p class="text-gray-700 mb-6">
+            Sayf El Falah adalah sebuah yayasan pendidikan yang berdedikasi untuk menciptakan generasi terbaik melalui kurikulum yang
+            terintegrasi dan berfokus pada fitrah anak, dari usia dini hingga remaja.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="program-card bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl border-l-4 border-primary hover:border-secondary"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="300"
+          >
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 rounded-full bg-primary bg-opacity-20 flex items-center justify-center mr-4">
+                  <i class="fas fa-hat-cowboy text-primary text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-secondary">KB & TK Selfa</h3>
+              </div>
+              <p class="text-text mb-4 font-sans">
+                Membangun fondasi Islami dan karakter anak melalui pembelajaran yang menyenangkan, mengintegrasikan aktivitas sehari-hari
+                dengan nilai-nilai luhur.
+              </p>
+              <ul class="space-y-2 text-sm text-text font-sans">
+                <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Pembentukan karakter Islami</li>
+                <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Pengalaman belajar yang interaktif</li>
+                <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Menjadikan Nabi sebagai teladan</li>
+              </ul>
+            </div>
+          </div>
+
+          <div
+            class="program-card bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl border-l-4 border-primary hover:border-secondary"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="400"
+          >
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 rounded-full bg-primary bg-opacity-20 flex items-center justify-center mr-4">
+                  <i class="fas fa-leaf text-primary text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-secondary">SD Alam Selfa</h3>
+              </div>
+              <p class="text-text mb-4 font-sans">
+                Mengajak anak kembali menyatu dengan alam sebagai sumber pembelajaran utama. Kami fokus pada pengembangan utuh lahir dan
+                batin, melampaui batasan angka-angka.
+              </p>
+              <ul class="space-y-2 text-sm text-text font-sans">
+                <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Pembelajaran berbasis alam</li>
+                <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Pengembangan akal dan fisik</li>
+                <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Metode yang interaktif dan holistik</li>
+              </ul>
+            </div>
+          </div>
+
+          <div
+            class="program-card bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl border-l-4 border-primary hover:border-secondary"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-delay="500"
+          >
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 rounded-full bg-primary bg-opacity-20 flex items-center justify-center mr-4">
+                  <i class="fas fa-quran text-primary text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold text-secondary">Pondok Pesantren</h3>
+              </div>
+              <p class="text-text mb-4 font-sans">
+                Mencetak generasi pemimpin yang menguasai ilmu agama dan modern secara seimbang. Program ini menguatkan akidah dan akhlak
+                mulia.
+              </p>
+              <ul class="space-y-2 text-sm text-text font-sans">
+                <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Pembinaan akidah dan akhlak</li>
+                <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Penguasaan ilmu agama dan sains</li>
+                <li class="flex items-center"><i class="fas fa-check-circle text-primary mr-2"></i> Menyiapkan pemimpin masa depan</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section id="statistics" class="relative w-full overflow-hidden bg-cover bg-center">
+      <div class="absolute inset-0 bg-black opacity-60 z-0"></div>
+
+      <div class="max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8 lg:py-20 relative z-10">
+        <dl class="mt-10 text-center sm:max-w-3xl sm:mx-auto sm:grid sm:grid-cols-4 sm:gap-8">
+          <div class="flex flex-col">
+            <dt class="order-2 mt-2 text-lg leading-6 font-medium text-white">Siswa</dt>
+            <dd class="order-1 text-5xl font-extrabold text-white">350+</dd>
+          </div>
+          <div class="flex flex-col mt-10 sm:mt-0">
+            <dt class="order-2 mt-2 text-lg leading-6 font-medium text-white">Guru</dt>
+            <dd class="order-1 text-5xl font-extrabold text-white">40+</dd>
+          </div>
+          <div class="flex flex-col mt-10 sm:mt-0">
+            <dt class="order-2 mt-2 text-lg leading-6 font-medium text-white">Kelas</dt>
+            <dd class="order-1 text-5xl font-extrabold text-white">25</dd>
+          </div>
+          <div class="flex flex-col mt-10 sm:mt-0">
+            <dt class="order-2 mt-2 text-lg leading-6 font-medium text-white">Ekstrakurikuler</dt>
+            <dd class="order-1 text-5xl font-extrabold text-white">10+</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="gallery-grid">
+          <!-- Gallery Items -->
+          <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-aos="zoom-in">
+            <img src="image/belajarikhwan1.jpg" alt="Kegiatan Belajar" class="w-full h-48 object-cover" />
+          </div>
+          <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-aos="zoom-in" data-aos-delay="100">
+            <img src="image/belajarakhwat1.jpg" alt="Ekstrakurikuler" class="w-full h-48 object-cover" />
+          </div>
+          <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-aos="zoom-in" data-aos-delay="200">
+            <img src="image/IMG_3454.JPEG" alt="Perpustakaan" class="w-full h-48 object-cover" />
+          </div>
+          <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-aos="zoom-in" data-aos-delay="300">
+            <img src="image/sholat dhuha.jpg" alt="Laboratorium" class="w-full h-48 object-cover" />
+          </div>
+          <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-aos="zoom-in" data-aos-delay="400">
+            <img src="image/swimming class.jpg" alt="Studi Lapangan" class="w-full h-48 object-cover" />
+          </div>
+          <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-aos="zoom-in" data-aos-delay="500">
+            <img src="image/IMG_3091.JPG" alt="Kelas" class="w-full h-48 object-cover" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 contactmap-childish-bg">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Hubungi Kami</h2>
+          <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+          <p class="text-lg text-text max-w-3xl mx-auto">
+            Kami siap menjawab pertanyaan Anda dan memberikan informasi lebih lanjut tentang KB & TK Selfa.
+          </p>
+        </div>
+
+        <div class="flex flex-col lg:flex-row gap-12">
+          <div class="w-full">
+            <div class="bg-light rounded-lg shadow-md p-8 h-full flex flex-col lg:flex-row gap-8">
+              <div class="lg:w-1/2">
+                <h3 class="text-2xl font-bold text-secondary mb-6">Informasi Kontak</h3>
+                <div class="space-y-6">
+                  <div class="flex items-start">
+                    <div
+                      class="w-10 h-10 rounded-full bg-primary bg-opacity-20 flex items-center justify-center mr-4 mt-1 flex-none"
+                      data-aos="fade-right"
+                      data-aos-duration="800"
+                      data-aos-delay="0"
+                    >
+                      <i class="fas fa-map-marker-alt text-primary"></i>
+                    </div>
+                    <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+                      <h4 class="font-bold text-secondary mb-1">Alamat</h4>
+                      <p class="text-text">Jl. Ki Ageng Selo, Krasakan, Jebugan, Kec. Klaten Utara, Kabupaten Klaten, Jawa Tengah 57433</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <div
+                      class="w-10 h-10 rounded-full bg-primary bg-opacity-20 flex items-center justify-center mr-4 mt-1 flex-none"
+                      data-aos="fade-right"
+                      data-aos-duration="800"
+                      data-aos-delay="200"
+                    >
+                      <i class="fas fa-phone-alt text-primary"></i>
+                    </div>
+                    <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="300">
+                      <h4 class="font-bold text-secondary mb-1">Telepon</h4>
+                      <p class="text-text">0811 2653 630 (WhatsApp)</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <div
+                      class="w-10 h-10 rounded-full bg-primary bg-opacity-20 flex items-center justify-center mr-4 mt-1 flex-none"
+                      data-aos="fade-right"
+                      data-aos-duration="800"
+                      data-aos-delay="400"
+                    >
+                      <i class="fas fa-envelope text-primary"></i>
+                    </div>
+                    <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="500">
+                      <h4 class="font-bold text-secondary mb-1">Email</h4>
+                      <p class="text-text">Sayfelfalah@gmail.com</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <div
+                      class="w-10 h-10 rounded-full bg-primary bg-opacity-20 flex items-center justify-center mr-4 mt-1 flex-none"
+                      data-aos="fade-right"
+                      data-aos-duration="800"
+                      data-aos-delay="600"
+                    >
+                      <i class="fas fa-clock text-primary"></i>
+                    </div>
+                    <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="700">
+                      <h4 class="font-bold text-secondary mb-1">Jam Operasional</h4>
+                      <p class="text-text">Senin - Jumat: 07.00 - 16.00 WIB</p>
+                      <p class="text-text">Sabtu: 08.00 - 12.00 WIB</p>
+                      <p class="text-text">Minggu & Hari Libur: Tutup</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-8">
+                  <h4 class="font-bold text-secondary mb-4">Ikuti Kami</h4>
+                  <div class="flex space-x-4">
+                    <a
+                      href="#"
+                      class="w-10 h-10 rounded-full bg-secondary hover:bg-primary text-white flex items-center justify-center transition duration-300"
+                    >
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="w-10 h-10 rounded-full bg-secondary hover:bg-primary text-white flex items-center justify-center transition duration-300"
+                    >
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="w-10 h-10 rounded-full bg-secondary hover:bg-primary text-white flex items-center justify-center transition duration-300"
+                    >
+                      <i class="fab fa-youtube"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="w-10 h-10 rounded-full bg-secondary hover:bg-primary text-white flex items-center justify-center transition duration-300"
+                    >
+                      <i class="fab fa-whatsapp"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="lg:w-1/2">
+                <div class="h-64 lg:h-full bg-gray-200 rounded-lg overflow-hidden">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.002754723333!2d110.59855107326445!3d-7.682850676058566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a435be390e88f%3A0x56c6df479b7dcb9!2sSekolah%20Alam%20Selfa!5e0!3m2!1sid!2sid!4v1756700327534!5m2!1sid!2sid"
+                    width="100%"
+                    height="100%"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-12">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="text-xl font-bold font-heading mb-4">Sayf El Falah</h3>
+            <p class="mb-4">Sekolah unggulan dengan pendidikan terpadu yang mengintegrasikan ilmu pengetahuan dan nilai-nilai keislaman.</p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-white hover:text-primary transition"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="text-white hover:text-primary transition"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="text-white hover:text-primary transition"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="text-white hover:text-primary transition"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold font-heading mb-4">Tautan Cepat</h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:text-primary transition">Home</a></li>
+              <li><a href="#visimisi" class="hover:text-primary transition">Visi Misi</a></li>
+              <li><a href="#about" class="hover:text-primary transition">Tentang Kami</a></li>
+              <li><a href="#gallery" class="hover:text-primary transition">Galeri</a></li>
+              <li><a href="#news" class="hover:text-primary transition">Berita</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold font-heading mb-4">Program</h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:text-primary transition">KB TK</a></li>
+              <li><a href="#" class="hover:text-primary transition">SD</a></li>
+              <li><a href="#" class="hover:text-primary transition">Pondok Pesantren</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold font-heading mb-4">Kontak</h3>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                <span>Jl. Pendidikan No. 123, Jakarta Selatan</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-phone mr-3"></i>
+                <span>(021) 7654321</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-envelope mr-3"></i>
+                <span>info@sayfelfalah.sch.id</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+          <p>&copy; 2025 Sayf El Falah. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- AOS Initialization -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      // Initialize AOS
+      AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100,
+      });
+
+      // Mobile menu toggle
+      document.getElementById("menu-btn").addEventListener("click", function () {
+        document.getElementById("mobile-menu").classList.toggle("hidden");
+      });
+
+      // Navbar scroll effect
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+      // Tambahkan event listener untuk mendeteksi klik di seluruh dokumen
+      document.addEventListener("click", function (event) {
+        const mobileMenu = document.getElementById("mobile-menu");
+        const menuBtn = document.getElementById("menu-btn");
+
+        // Periksa apakah menu mobile terbuka dan klik tidak terjadi di dalam menu atau tombol menu
+        const isClickInsideMenu = mobileMenu.contains(event.target);
+        const isClickInsideMenuBtn = menuBtn.contains(event.target);
+
+        if (!mobileMenu.classList.contains("hidden") && !isClickInsideMenu && !isClickInsideMenuBtn) {
+          // Jika menu terbuka dan klik di luar, sembunyikan menu
+          mobileMenu.classList.add("hidden");
+        }
+      });
+
+      // Counter animation for statistics
+      function animateCounter() {
+        const counters = document.querySelectorAll(".stat-number");
+        const speed = 200;
+
+        counters.forEach((counter) => {
+          const target = +counter.getAttribute("data-count");
+          const count = +counter.innerText;
+          const increment = Math.ceil(target / speed);
+
+          if (count < target) {
+            counter.innerText = Math.min(count + increment, target);
+            setTimeout(() => animateCounter(counter), 1);
+          }
+        });
+      }
+
+      // Initialize counter when statistics section is in view
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              animateCounter();
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.5 }
+      );
+
+      observer.observe(document.querySelector(".bg-primary"));
+    </script>
+  </body>
+</html>
