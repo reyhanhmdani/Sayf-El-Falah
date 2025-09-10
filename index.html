@@ -22,13 +22,14 @@
   <body class="font-body">
     <!-- Navbar -->
     <nav class="navbar fixed w-full z-50 py-4">
-      <div class="container mx-auto px-10 flex justify-between items-center">
+      <div class="container mx-auto px-16 flex justify-between items-center">
         <div class="flex items-center">
-          <span class="logo-text text-white text-2xl font-bold font-heading">Sayf El Falah</span>
+          <span class="logo-text text-white text-2xl font-bold font-sans">Sayf El Falah</span>
         </div>
 
         <div class="hidden md:flex space-x-8">
           <a href="#" class="nav-link text-white hover:text-primary transition">Home</a>
+          <a href="#about" class="nav-link text-white hover:text-primary transition">About Us</a>
           <div class="relative group">
             <button
               class="nav-link text-white hover:text-primary transition focus:outline-none flex items-center"
@@ -40,12 +41,11 @@
               id="dropdown-menu-desktop"
               class="absolute left-0 mt-2 w-40 bg-white rounded-md shadow-lg py-2 z-20 opacity-0 -translate-y-4 pointer-events-none transition-all duration-300"
             >
-              <a href="#kb-tk" class="block px-4 py-2 text-sm text-secondary hover:bg-gray-100 hover:text-primary">KB & TK Selfa</a>
-              <a href="#sd-alam" class="block px-4 py-2 text-sm text-secondary hover:bg-gray-100 hover:text-primary">SD Alam Selfa</a>
-              <a href="#ponpes" class="block px-4 py-2 text-sm text-secondary hover:bg-gray-100 hover:text-primary">Pondok Pesantren</a>
+              <a href="KbTK.html" class="block px-4 py-2 text-sm text-secondary hover:bg-gray-100 hover:text-primary">KB & TK Selfa</a>
+              <a href="sd.html" class="block px-4 py-2 text-sm text-secondary hover:bg-gray-100 hover:text-primary">SD Alam Selfa</a>
+              <a href="ponpes.html" class="block px-4 py-2 text-sm text-secondary hover:bg-gray-100 hover:text-primary">Pondok Pesantren</a>
             </div>
           </div>
-          <a href="#about" class="nav-link text-white hover:text-primary transition">About Us</a>
         </div>
 
         <div class="md:hidden">
@@ -77,69 +77,79 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero">
-      <div class="container mx-auto px-6 text-center text-white" data-aos="fade-up">
-        <h1 class="text-4xl md:text-6xl font-bold font-heading mb-4">Selamat Datang di Sekolah Sayf El Falah</h1>
+    <header class="relative w-full h-screen flex items-center justify-center">
+      <div class="absolute inset-0 z-0 bg-cover bg-center" style="background-image: url('/image/selfa.jpg')"></div>
+
+      <div class="absolute inset-0 z-10 bg-black opacity-60"></div>
+
+      <div class="relative z-20 container mx-auto px-6 text-center text-white" data-aos="fade-up">
+        <h1 class="text-4xl md:text-6xl font-bold font-heading mb-4">Selamat Datang di Sekolah</h1>
+        <h1 class="text-5xl md:text-8xl font-bold font-sans mb-4 text-primary">Sayf El Falah</h1>
         <p class="text-xl md:text-2xl mb-8">Membentuk Generasi Unggul, Berkarakter, dan Berprestasi</p>
-        <a
-          href="#program"
-          class="bg-primary hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105"
-        >
-          Program Kita
-        </a>
       </div>
     </header>
 
     <!-- Visi & Misi Section -->
-    <section id="visimisi" class="py-20 bg-gray-50">
+    <section id="visimisi" class="py-20 md:py-24 bg-gray-50">
       <div class="container mx-auto px-6">
-        <h2 class="text-3xl md:text-4xl font-bold font-heading text-center text-secondary mb-16" data-aos="fade-up">Visi & Misi Sekolah</h2>
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold font-heading text-secondary mb-4" data-aos="fade-up">Visi & Misi Sekolah</h2>
+          <div class="w-20 h-1 bg-primary mx-auto" data-aos="fade-up" data-aos-delay="100"></div>
+        </div>
 
-        <div class="grid md:grid-cols-2 gap-12">
-          <!-- Visi -->
-          <div class="bg-white p-8 rounded-lg shadow-lg" data-aos="fade-right">
-            <div class="text-center mb-6">
-              <i class="fas fa-eye text-4xl text-primary"></i>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div
+            class="relative bg-white p-8 rounded-2xl shadow-xl transition-all duration-300 hover:shadow-2xl hover:ring-2 hover:ring-primary transform hover:-translate-y-2"
+            data-aos="fade-right"
+          >
+            <div class="mb-6 flex items-center gap-4">
+              <div class="flex-shrink-0">
+                <i class="fas fa-eye text-3xl text-primary"></i>
+              </div>
+              <h3 class="text-2xl font-bold font-heading text-secondary">Visi Kami</h3>
             </div>
-            <h3 class="text-2xl font-bold font-heading text-secondary mb-4 text-center">Visi Kami</h3>
-            <p class="text-gray-700 text-lg">
+            <p class="text-gray-700 text-base">
               Membangun lingkungan pembelajaran paling ideal yang Islami, mutakhir, menyenangkan, dan terintegrasi dengan aktivitas
               kehidupan. Kami ingin membantu setiap anak tumbuh menjadi manusia utuh yang mampu menjadi pemimpin dan rahmat bagi dunia,
               sesuai dengan ajaran Allah Ta’ala dan Rasulullah shallallahu alaihi wa sallam.
             </p>
           </div>
 
-          <!-- Misi -->
-          <div class="bg-white p-8 rounded-lg shadow-lg" data-aos="fade-left">
-            <div class="text-center mb-6">
-              <i class="fas fa-bullseye text-4xl text-primary"></i>
+          <div
+            class="relative bg-white p-8 rounded-2xl shadow-xl transition-all duration-300 hover:shadow-2xl hover:ring-2 hover:ring-primary transform hover:-translate-y-2"
+            data-aos="fade-left"
+          >
+            <div class="mb-6 flex items-center gap-4">
+              <div class="flex-shrink-0">
+                <i class="fas fa-bullseye text-3xl text-primary"></i>
+              </div>
+              <h3 class="text-2xl font-bold font-heading text-secondary">Misi Kami</h3>
             </div>
-            <h3 class="text-2xl font-bold font-heading text-secondary mb-4 text-center">Misi Kami</h3>
-            <ul class="text-gray-700 space-y-3">
+            <ul class="text-gray-700 space-y-4 text-base">
               <li class="flex items-start">
-                <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                <i class="fas fa-check text-primary mt-1 mr-3 flex-shrink-0"></i>
                 <span>Membiasakan perilaku Islami dalam kehidupan sehari-hari anak-anak sesuai dengan Al-Qur'an dan As-Sunnah.</span>
               </li>
               <li class="flex items-start">
-                <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                <i class="fas fa-check text-primary mt-1 mr-3 flex-shrink-0"></i>
                 <span>Melaksanakan pembelajaran yang interaktif dan inovatif sesuai dengan perkembangan anak.</span>
               </li>
               <li class="flex items-start">
-                <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                <i class="fas fa-check text-primary mt-1 mr-3 flex-shrink-0"></i>
                 <span>Menjadikan Para Nabi sebagai teladan utama (role model) bagi anak-anak dalam setiap aspek kehidupan.</span>
               </li>
               <li class="flex items-start">
-                <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                <i class="fas fa-check text-primary mt-1 mr-3 flex-shrink-0"></i>
                 <span
                   >Menyediakan metode pembelajaran yang komprehensif untuk mengembangkan seluruh aspek dasar manusia, meliputi akal, rasa,
                   fisik, mental, dan sosial.</span
                 >
               </li>
               <li class="flex items-start">
-                <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                <i class="fas fa-check text-primary mt-1 mr-3 flex-shrink-0"></i>
                 <span
                   >Menjadi lingkungan tumbuh terbaik bagi anak-anak di masa keemasannya dengan memberikan beragam pengalaman kehidupan yang
-                  dibutuhkan di masa depan..</span
+                  dibutuhkan di masa depan.</span
                 >
               </li>
             </ul>
@@ -147,6 +157,12 @@
         </div>
       </div>
     </section>
+
+    <div class="flex items-center justify-center my-12">
+      <hr class="w-16 h-1 bg-primary rounded-full" />
+      <i class="fas fa-star text-2xl text-primary mx-4"></i>
+      <hr class="w-16 h-1 bg-primary rounded-full" />
+    </div>
 
     <!-- About Us Section -->
     <section id="about" class="py-20">
@@ -157,11 +173,7 @@
 
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div data-aos="fade-right">
-            <img
-              src="https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-              alt="Gedung Sekolah Sayf El Falah"
-              class="rounded-lg shadow-lg"
-            />
+            <img src="image/masjidselfa1.jpg" alt="Gedung Sekolah Sayf El Falah" class="rounded-lg shadow-lg" />
           </div>
 
           <div data-aos="fade-left">
@@ -196,6 +208,12 @@
       </div>
     </section>
 
+    <div class="flex items-center justify-center my-12">
+      <hr class="w-16 h-1 bg-primary rounded-full" />
+      <i class="fas fa-star text-2xl text-primary mx-4"></i>
+      <hr class="w-16 h-1 bg-primary rounded-full" />
+    </div>
+
     <!-- Program Selfa Section -->
     <section id="program" class="py-16 md:py-24 bg-slate-50">
       <div class="container mx-auto px-4">
@@ -210,58 +228,131 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <a
-            href="/kb-tk"
-            class="program-card bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl border-l-4 border-primary hover:border-secondary flex flex-col justify-between"
+            href="/KbTK.html"
+            class="group relative cursor-pointer overflow-hidden bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10 card-observe"
             data-aos="fade-up"
             data-aos-duration="800"
             data-aos-delay="300"
           >
-            <div class="p-6 text-center flex flex-col items-center">
-              <div class="w-24 h-24 rounded-full bg-primary bg-opacity-20 flex items-center justify-center mb-4">
-                <img src="/image/logo-tk.png" alt="Logo KB & TK Selfa" class="w-16 h-16 object-contain" />
+            <span
+              class="absolute top-10 z-0 h-20 w-20 rounded-full bg-gradient-to-r from-primary to-toskaMuda transition-all duration-500 group-hover:scale-[10] group-hover:opacity-100 group-[.hover]:scale-[10] group-[.hover]:opacity-100"
+            >
+            </span>
+            <div class="relative z-10 mx-auto max-w-md">
+              <!-- icon + title -->
+              <div class="flex items-center gap-4">
+                <span
+                  class="grid h-20 w-20 place-items-center rounded-full border border-primary bg-white transition-all duration-300 group-hover:bg-white"
+                >
+                  <img src="/image/logo-tk.png" alt="Logo KB & TK Selfa" class="h-10 w-10 transition-all group-hover:scale-110" />
+                </span>
+                <h3 class="text-xl font-bold text-secondary group-hover:text-white transition-colors group-[.hover]:text-white">
+                  KB & TK Selfa
+                </h3>
               </div>
-              <h3 class="text-2xl font-bold text-secondary mb-2">KB & TK Selfa</h3>
-              <p class="text-sm text-gray-600 font-sans">Membangun fondasi Islami dan karakter anak.</p>
+              <!-- deskripsi -->
+              <div
+                class="space-y-6 pt-5 text-base leading-7 text-gray-600 transition-all duration-300 group-hover:text-white/90 group-[.hover]:text-white/90"
+              >
+                <p>Membangun fondasi Islami dan karakter anak melalui pembelajaran yang menyenangkan dan berfokus pada fitrah.</p>
+              </div>
+              <div class="pt-5 text-base font-semibold leading-7">
+                <p>
+                  <span class="text-primary transition-all duration-300 group-hover:text-white group-[.hover]:text-white"
+                    >Lihat Program →</span
+                  >
+                </p>
+              </div>
             </div>
           </a>
 
+          <!-- Card 2 -->
           <a
-            href="/sd-alam"
-            class="program-card bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl border-l-4 border-primary hover:border-secondary flex flex-col justify-between"
+            href="/sd.html"
+            class="group relative cursor-pointer overflow-hidden bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10 card-observe"
             data-aos="fade-up"
             data-aos-duration="800"
             data-aos-delay="400"
           >
-            <div class="p-6 text-center flex flex-col items-center">
-              <div class="w-24 h-24 rounded-full bg-primary bg-opacity-20 flex items-center justify-center mb-4">
-                <img src="/image/icon-sd-selfa.png" alt="Logo SD Alam Selfa" class="w-16 h-16 object-contain" />
+            <span
+              class="absolute top-10 z-0 h-20 w-20 rounded-full bg-gradient-to-r from-primary to-biru transition-all duration-500 group-hover:scale-[10] group-hover:opacity-100 group-[.hover]:scale-[10] group-[.hover]:opacity-100"
+            >
+            </span>
+            <div class="relative z-10 mx-auto max-w-md">
+              <div class="flex items-center gap-4">
+                <span
+                  class="grid h-20 w-20 place-items-center rounded-full border border-primary bg-white transition-all duration-300 group-hover:bg-white"
+                >
+                  <img src="/image/icon-sd-selfa.png" alt="Logo SD Alam Selfa" class="h-10 w-10 transition-all group-hover:scale-110" />
+                </span>
+                <h3 class="text-xl font-bold text-secondary group-hover:text-white transition-colors group-[.hover]:text-white">
+                  SD Alam Selfa
+                </h3>
               </div>
-              <h3 class="text-2xl font-bold text-secondary mb-2">SD Alam Selfa</h3>
-              <p class="text-sm text-gray-600 font-sans">Pembelajaran yang terintegrasi dengan alam.</p>
+              <div
+                class="space-y-6 pt-5 text-base leading-7 text-gray-600 transition-all duration-300 group-hover:text-white/90 group-[.hover]:text-white/90"
+              >
+                <p>Pembelajaran berbasis alam untuk mengembangkan akal dan fisik anak secara interaktif dan holistik.</p>
+              </div>
+              <div class="pt-5 text-base font-semibold leading-7">
+                <p>
+                  <span class="text-primary transition-all duration-300 group-hover:text-white group-[.hover]:text-white"
+                    >Lihat Program →</span
+                  >
+                </p>
+              </div>
             </div>
           </a>
 
+          <!-- Card 3 -->
           <a
-            href="/pondok-pesantren"
-            class="program-card bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl border-l-4 border-primary hover:border-secondary flex flex-col justify-between"
+            href="/ponpes.html"
+            class="group relative cursor-pointer overflow-hidden bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl sm:mx-auto sm:max-w-sm sm:rounded-lg sm:px-10 card-observe"
             data-aos="fade-up"
             data-aos-duration="800"
-            data-aos-delay="500"
+            data-aos-delay="400"
           >
-            <div class="p-6 text-center flex flex-col items-center">
-              <div class="w-24 h-24 rounded-full bg-primary bg-opacity-20 flex items-center justify-center mb-4">
-                <img src="/image/logo-tk.png" alt="Logo Pondok Pesantren" class="w-16 h-16 object-contain" />
+            <span
+              class="absolute top-10 z-0 h-20 w-20 rounded-full bg-gradient-to-r from-primary to-secondary transition-all duration-500 group-hover:scale-[10] group-hover:opacity-100 group-[.hover]:scale-[10] group-[.hover]:opacity-100"
+            >
+            </span>
+            <div class="relative z-10 mx-auto max-w-md">
+              <div class="flex items-center gap-4">
+                <span
+                  class="grid h-20 w-20 place-items-center rounded-full border border-primary bg-white transition-all duration-300 group-hover:bg-white"
+                >
+                  <img src="/image/logo-tk.png" alt="Logo SD Alam Selfa" class="h-10 w-10 transition-all group-hover:scale-110" />
+                </span>
+                <h3 class="text-xl font-bold text-secondary group-hover:text-white transition-colors group-[.hover]:text-white">
+                  Ponpes Selfa
+                </h3>
               </div>
-              <h3 class="text-2xl font-bold text-secondary mb-2">Pondok Pesantren</h3>
-              <p class="text-sm text-gray-600 font-sans">Mencetak generasi pemimpin Islami.</p>
+              <div
+                class="space-y-6 pt-5 text-base leading-7 text-gray-600 transition-all duration-300 group-hover:text-white/90 group-[.hover]:text-white/90"
+              >
+                <p>Mencetak generasi pemimpin yang menguasai ilmu agama dan modern secara seimbang untuk masa depan.</p>
+              </div>
+              <div class="pt-5 text-base font-semibold leading-7">
+                <p>
+                  <span class="text-primary transition-all duration-300 group-hover:text-white group-[.hover]:text-white"
+                    >Lihat Program →</span
+                  >
+                </p>
+              </div>
             </div>
           </a>
         </div>
       </div>
     </section>
 
+    <div class="flex items-center justify-center my-12">
+      <hr class="w-16 h-1 bg-primary rounded-full" />
+      <i class="fas fa-star text-2xl text-primary mx-4"></i>
+      <hr class="w-16 h-1 bg-primary rounded-full" />
+    </div>
+
     <!-- Statistics Section -->
-    <section id="statistics" class="relative w-full overflow-hidden bg-cover bg-center">
+    <section id="statistics" class="relative w-full overflow-hidden bg-cover bg-center" style="background-image: url('/image/selfa.jpg')">
       <div class="absolute inset-0 bg-black opacity-60 z-0"></div>
 
       <div class="max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8 lg:py-20 relative z-10">
@@ -285,32 +376,58 @@
         </dl>
       </div>
     </section>
+
+    <div class="flex items-center justify-center my-12">
+      <hr class="w-16 h-1 bg-primary rounded-full" />
+      <i class="fas fa-star text-2xl text-primary mx-4"></i>
+      <hr class="w-16 h-1 bg-primary rounded-full" />
+    </div>
+
     <!-- Gallery Section -->
     <section id="gallery" class="py-20 bg-gray-50">
       <div class="container mx-auto px-6">
-        <div class="gallery-grid">
+        <div class="gallery-grid grid grid-cols-2 md:grid-cols-4 gap-6">
           <!-- Gallery Items -->
-          <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-aos="zoom-in">
+          <div class="gallery-item rounded-lg overflow-hidden shadow-lg cursor-pointer" data-index="0">
             <img src="image/belajarikhwan1.jpg" alt="Kegiatan Belajar" class="w-full h-48 object-cover" />
           </div>
-          <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-aos="zoom-in" data-aos-delay="100">
+          <div class="gallery-item rounded-lg overflow-hidden shadow-lg cursor-pointer" data-index="1">
             <img src="image/belajarakhwat1.jpg" alt="Ekstrakurikuler" class="w-full h-48 object-cover" />
           </div>
-          <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-aos="zoom-in" data-aos-delay="200">
+          <div class="gallery-item rounded-lg overflow-hidden shadow-lg cursor-pointer" data-index="2">
             <img src="image/IMG_3454.JPEG" alt="Perpustakaan" class="w-full h-48 object-cover" />
           </div>
-          <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-aos="zoom-in" data-aos-delay="300">
+          <div class="gallery-item rounded-lg overflow-hidden shadow-lg cursor-pointer" data-index="3">
             <img src="image/sholat dhuha.jpg" alt="Laboratorium" class="w-full h-48 object-cover" />
           </div>
-          <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-aos="zoom-in" data-aos-delay="400">
+          <div class="gallery-item rounded-lg overflow-hidden shadow-lg cursor-pointer" data-index="4">
             <img src="image/swimming class.jpg" alt="Studi Lapangan" class="w-full h-48 object-cover" />
           </div>
-          <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-aos="zoom-in" data-aos-delay="500">
+          <div class="gallery-item rounded-lg overflow-hidden shadow-lg cursor-pointer" data-index="5">
             <img src="image/IMG_3091.JPG" alt="Kelas" class="w-full h-48 object-cover" />
+          </div>
+          <div class="gallery-item rounded-lg overflow-hidden shadow-lg cursor-pointer" data-index="6">
+            <img src="image/gambar_bersama.jpg" alt="Kelas" class="w-full h-48 object-cover" />
+          </div>
+          <div class="gallery-item rounded-lg overflow-hidden shadow-lg cursor-pointer" data-index="7">
+            <img src="image/hadrahikhwan1.jpg" alt="Kelas" class="w-full h-48 object-cover" />
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 bg-black/90 hidden flex-col items-center justify-center z-50">
+      <button id="closeLightbox" class="absolute top-6 right-6 text-white text-3xl">&times;</button>
+      <button id="prevImage" class="absolute left-6 text-white text-3xl">&#10094;</button>
+      <img id="lightboxImage" src="" alt="Preview" class="max-h-[70vh] max-w-[90vw] rounded-lg shadow-2xl mb-4" />
+      <button id="nextImage" class="absolute right-6 text-white text-3xl">&#10095;</button>
+
+      <!-- Thumbnails -->
+      <div id="lightboxThumbnails" class="flex gap-2 overflow-x-auto max-w-[90vw] mt-4 p-2">
+        <!-- Akan diisi thumbnail otomatis -->
+      </div>
+    </div>
 
     <!-- Contact Section -->
     <section id="contact" class="py-16 md:py-24 contactmap-childish-bg">
@@ -442,7 +559,7 @@
       <div class="container mx-auto px-6">
         <div class="grid md:grid-cols-4 gap-8">
           <div>
-            <h3 class="text-xl font-bold font-heading mb-4">Sayf El Falah</h3>
+            <h3 class="text-xl font-bold font-sans mb-4">Sayf El Falah</h3>
             <p class="mb-4">Sekolah unggulan dengan pendidikan terpadu yang mengintegrasikan ilmu pengetahuan dan nilai-nilai keislaman.</p>
             <div class="flex space-x-4">
               <a href="#" class="text-white hover:text-primary transition"><i class="fab fa-facebook-f"></i></a>
@@ -499,83 +616,6 @@
 
     <!-- AOS Initialization -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      // Initialize AOS
-      AOS.init({
-        duration: 1000,
-        once: true,
-        offset: 100,
-      });
-
-      // Mobile menu toggle
-      document.getElementById("menu-btn").addEventListener("click", function (event) {
-        event.stopPropagation(); // Mencegah event klik menyebar ke dokumen
-        const mobileMenu = document.getElementById("mobile-menu");
-        const dropdownMenuMobile = document.getElementById("dropdown-menu-mobile");
-
-        // Toggle kelas untuk animasi menu utama
-        mobileMenu.classList.toggle("opacity-0");
-        mobileMenu.classList.toggle("-translate-y-4");
-
-        // Toggle pointer-events
-        if (mobileMenu.classList.contains("opacity-0")) {
-          mobileMenu.classList.add("pointer-events-none");
-          // Tutup dropdown jika menu utama ditutup
-          dropdownMenuMobile.classList.add("hidden");
-        } else {
-          mobileMenu.classList.remove("pointer-events-none");
-        }
-      });
-
-      // Navbar scroll effect
-      window.addEventListener("scroll", function () {
-        const navbar = document.querySelector(".navbar");
-        if (window.scrollY > 50) {
-          navbar.classList.add("scrolled");
-        } else {
-          navbar.classList.remove("scrolled");
-        }
-      });
-
-      // Logika untuk dropdown desktop
-      document.getElementById("dropdown-btn-desktop").addEventListener("click", function (event) {
-        event.preventDefault();
-        const dropdownMenu = document.getElementById("dropdown-menu-desktop");
-        dropdownMenu.classList.toggle("opacity-0");
-        dropdownMenu.classList.toggle("-translate-y-4");
-        dropdownMenu.classList.toggle("pointer-events-none");
-      });
-
-      // Logika untuk dropdown mobile
-      document.getElementById("dropdown-btn-mobile").addEventListener("click", function (event) {
-        event.preventDefault();
-        const dropdownMenu = document.getElementById("dropdown-menu-mobile");
-        dropdownMenu.classList.toggle("hidden");
-      });
-
-      // Event listener untuk menutup menu mobile dan dropdown saat klik di luar
-      document.addEventListener("click", function (event) {
-        const mobileMenu = document.getElementById("mobile-menu");
-        const menuBtn = document.getElementById("menu-btn");
-        const dropdownMenuDesktop = document.getElementById("dropdown-menu-desktop");
-        const dropdownBtnDesktop = document.getElementById("dropdown-btn-desktop");
-
-        const isClickInsideMenu = mobileMenu.contains(event.target);
-        const isClickInsideMenuBtn = menuBtn.contains(event.target);
-        const isClickInsideDropdownDesktop = dropdownMenuDesktop.contains(event.target) || dropdownBtnDesktop.contains(event.target);
-
-        // Tutup menu mobile jika klik di luar area menu dan tombolnya
-        if (!mobileMenu.classList.contains("opacity-0") && !isClickInsideMenu && !isClickInsideMenuBtn) {
-          mobileMenu.classList.add("opacity-0", "-translate-y-4", "pointer-events-none");
-          // Pastikan dropdown mobile juga tertutup saat menu utama ditutup
-          document.getElementById("dropdown-menu-mobile").classList.add("hidden");
-        }
-
-        // Tutup dropdown desktop jika klik di luar area dropdown
-        if (!dropdownMenuDesktop.classList.contains("opacity-0") && !isClickInsideDropdownDesktop) {
-          dropdownMenuDesktop.classList.add("opacity-0", "-translate-y-4", "pointer-events-none");
-        }
-      });
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>

@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kb & TK Sayf El Falah</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="./src/output.css" />
+  </head>
+  <body class="font-body">
+    <!-- Navbar -->
+    <nav class="navbar fixed w-full z-50 py-4">
+      <div class="container mx-auto px-16 flex justify-between items-center">
+        <div class="flex items-center">
+          <span class="logo-text text-white text-2xl font-bold font-sans">Sayf El Falah</span>
+        </div>
+
+        <div class="hidden md:flex space-x-8">
+          <a href="#" class="nav-link text-white hover:text-primary transition">Home</a>
+          <a href="#about" class="nav-link text-white hover:text-primary transition">About Us</a>
+          <div class="relative group">
+            <button
+              class="nav-link text-white hover:text-primary transition focus:outline-none flex items-center"
+              id="dropdown-btn-desktop"
+            >
+              Program Selfa <i class="fas fa-chevron-down ml-2 text-xs transition-transform duration-300"></i>
+            </button>
+            <div
+              id="dropdown-menu-desktop"
+              class="absolute left-0 mt-2 w-40 bg-white rounded-md shadow-lg py-2 z-20 opacity-0 -translate-y-4 pointer-events-none transition-all duration-300"
+            >
+              <a href="KbTK.html" class="block px-4 py-2 text-sm text-secondary hover:bg-gray-100 hover:text-primary">KB & TK Selfa</a>
+              <a href="sd.html" class="block px-4 py-2 text-sm text-secondary hover:bg-gray-100 hover:text-primary">SD Alam Selfa</a>
+              <a href="ponpes.html" class="block px-4 py-2 text-sm text-secondary hover:bg-gray-100 hover:text-primary">Pondok Pesantren</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-white focus:outline-none">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="md:hidden bg-white py-4 px-6 absolute top-full left-0 w-full shadow-lg transition-all duration-300 ease-in-out opacity-0 -translate-y-4 pointer-events-none"
+      >
+        <a href="#" class="block py-2 text-secondary hover:text-primary">Home</a>
+        <a href="#about" class="block py-2 text-secondary hover:text-primary">About Us</a>
+
+        <button
+          class="block w-full text-left py-2 text-secondary hover:text-primary transition focus:outline-none"
+          id="dropdown-btn-mobile"
+        >
+          Program Selfa <i class="fas fa-chevron-down ml-2 text-xs transition-transform duration-300"></i>
+        </button>
+        <div id="dropdown-menu-mobile" class="hidden pl-4 py-2 space-y-2">
+          <a href="#kb-tk" class="block text-secondary hover:text-primary">KB & TK Selfa</a>
+          <a href="#sd-alam" class="block text-secondary hover:text-primary">SD Alam Selfa</a>
+          <a href="#ponpes" class="block text-secondary hover:text-primary">Pondok Pesantren</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative w-full h-screen flex items-center justify-center">
+      <div class="absolute inset-0 z-0 bg-cover bg-center" style="background-image: url('/image/gedungkbtk.jpg')"></div>
+
+      <div class="absolute inset-0 z-10 bg-black opacity-60"></div>
+
+      <div class="relative z-20 container mx-auto px-6 text-center text-white" data-aos="fade-up">
+        <h1 class="text-4xl md:text-6xl font-bold font-heading mb-4">Selamat Datang di KB & TK</h1>
+        <h1 class="text-5xl md:text-8xl font-bold font-sans mb-4 text-primary">Sayf El Falah</h1>
+        <p class="text-xl md:text-2xl mb-8">
+          Membentuk generasi cerdas, kreatif, dan berakhlak mulia melalui pendidikan usia dini yang menyenangkan.
+        </p>
+      </div>
+    </header>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold font-heading text-center text-secondary mb-16" data-aos="fade-up">
+          Tentang Sekolah Kb & Tk <span class="text-primary">Selfa</span>
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div data-aos="fade-right">
+            <img src="image/KBM TK.JPEG" alt="Gedung Sekolah Sayf El Falah" class="rounded-lg shadow-lg" />
+          </div>
+
+          <div data-aos="fade-left">
+            <h3 class="text-2xl font-bold font-heading text-secondary mb-4">Visi</h3>
+            <p class="text-gray-700 mb-6">
+              Membangun lingkungan pembelajaran paling ideal dalam islami, mutakhir, menyenangkan dan terintegritas dengan aktivitas
+              kehidupan bagi anak anak
+            </p>
+
+            <h3 class="text-2xl font-bold font-heading text-secondary mb-4">Misi</h3>
+            <ul class="text-gray-700 space-y-3">
+              <li class="flex items-start">
+                <i class="fas fa-star text-accent mt-1 mr-3"></i>
+                <span>Membiasakan perilaku Islami dalam kehidupan sehari hari sesuai dengan Al-Qur'an dan As Sunnah</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-star text-accent mt-1 mr-3"></i>
+                <span>Melaksanakan pembelajaran sesuai dengan perkembangan anak</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-star text-accent mt-1 mr-3"></i>
+                <span> Menjadikan Para Nabi sebagai role model bagi anak anak</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="flex items-center justify-center my-12">
+      <hr class="w-16 h-1 bg-primary rounded-full" />
+      <i class="fas fa-star text-2xl text-primary mx-4"></i>
+      <hr class="w-16 h-1 bg-primary rounded-full" />
+    </div>
+
+    <!-- Program Selfa Section -->
+    <section id="program-kbtk" class="relative py-20 md:py-28 bg-gradient-to-b from-slate-50 via-white to-slate-100 overflow-hidden">
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="text-center mb-20">
+          <h2 class="text-4xl md:text-5xl font-extrabold font-heading text-secondary mb-4">Program Unggulan KB & TK</h2>
+          <div class="w-24 h-1 bg-primary mx-auto mb-6 rounded-full"></div>
+          <p class="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+            Beragam program kreatif yang dirancang untuk merangsang potensi anak secara
+            <span class="font-semibold text-primary">holistik</span> melalui kegiatan seru, edukatif, dan menyenangkan.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- 1. Science Experiment -->
+          <div
+            class="group relative bg-white p-8 rounded-2xl shadow-xl border border-gray-100 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:border-primary/50"
+          >
+            <span
+              class="absolute inset-0 bg-gradient-to-br from-primary/80 to-secondary/80 opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-[.hover]:opacity-100 rounded-2xl"
+            ></span>
+            <div class="relative z-10 flex flex-col items-center text-center">
+              <div
+                class="flex items-center justify-center w-20 h-20 rounded-full bg-primary text-white mb-6 shadow-md transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 group-[.hover]:scale-110 group-[.hover]:rotate-6"
+              >
+                <i class="fas fa-flask text-3xl"></i>
+              </div>
+              <h3
+                class="text-xl font-bold text-secondary mb-3 transition-colors duration-500 group-hover:text-white group-[.hover]:text-white"
+              >
+                Science Experiment
+              </h3>
+              <p class="text-sm text-gray-600 transition-colors duration-500 group-hover:text-white/90 group-[.hover]:text-white/90">
+                Mengenalkan konsep dasar sains melalui eksperimen sederhana yang interaktif.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2. Calistung -->
+          <div
+            class="group relative bg-white p-8 rounded-2xl shadow-xl border border-gray-100 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:border-primary/50"
+          >
+            <span
+              class="absolute inset-0 bg-gradient-to-br from-primary/80 to-secondary/80 opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-[.hover]:opacity-100 rounded-2xl"
+            ></span>
+            <div class="relative z-10 flex flex-col items-center text-center">
+              <div
+                class="flex items-center justify-center w-20 h-20 rounded-full bg-primary text-white mb-6 shadow-md transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 group-[.hover]:scale-110 group-[.hover]:rotate-6"
+              >
+                <i class="fas fa-book-open text-3xl"></i>
+              </div>
+              <h3
+                class="text-xl font-bold text-secondary mb-3 transition-colors duration-500 group-hover:text-white group-[.hover]:text-white"
+              >
+                Calistung
+              </h3>
+              <p class="text-sm text-gray-600 transition-colors duration-500 group-hover:text-white/90 group-[.hover]:text-white/90">
+                Membangun fondasi membaca, menulis, dan berhitung dengan metode yang menyenangkan.
+              </p>
+            </div>
+          </div>
+
+          <!-- 3. Creative Project -->
+          <div
+            class="group relative bg-white p-8 rounded-2xl shadow-xl border border-gray-100 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:border-primary/50"
+          >
+            <span
+              class="absolute inset-0 bg-gradient-to-br from-primary/80 to-secondary/80 opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-[.hover]:opacity-100 rounded-2xl"
+            ></span>
+            <div class="relative z-10 flex flex-col items-center text-center">
+              <div
+                class="flex items-center justify-center w-20 h-20 rounded-full bg-primary text-white mb-6 shadow-md transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 group-[.hover]:scale-110 group-[.hover]:rotate-6"
+              >
+                <i class="fas fa-paint-brush text-3xl"></i>
+              </div>
+              <h3
+                class="text-xl font-bold text-secondary mb-3 transition-colors duration-500 group-hover:text-white group-[.hover]:text-white"
+              >
+                Creative Project
+              </h3>
+              <p class="text-sm text-gray-600 transition-colors duration-500 group-hover:text-white/90 group-[.hover]:text-white/90">
+                Mendorong imajinasi dan kreativitas anak melalui proyek-proyek seni dan kerajinan tangan yang inovatif.
+              </p>
+            </div>
+          </div>
+
+          <!-- 4. Fun Drawing -->
+          <div
+            class="group relative bg-white p-8 rounded-2xl shadow-xl border border-gray-100 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:border-primary/50"
+          >
+            <span
+              class="absolute inset-0 bg-gradient-to-br from-primary/80 to-secondary/80 opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-[.hover]:opacity-100 rounded-2xl"
+            ></span>
+            <div class="relative z-10 flex flex-col items-center text-center">
+              <div
+                class="flex items-center justify-center w-20 h-20 rounded-full bg-primary text-white mb-6 shadow-md transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 group-[.hover]:scale-110 group-[.hover]:rotate-6"
+              >
+                <i class="fas fa-pencil-alt text-3xl"></i>
+              </div>
+              <h3
+                class="text-xl font-bold text-secondary mb-3 transition-colors duration-500 group-hover:text-white group-[.hover]:text-white"
+              >
+                Fun Drawing
+              </h3>
+              <p class="text-sm text-gray-600 transition-colors duration-500 group-hover:text-white/90 group-[.hover]:text-white/90">
+                Mengasah keterampilan motorik halus dan ekspresi diri anak melalui kegiatan menggambar dan mewarnai yang ceria.
+              </p>
+            </div>
+          </div>
+
+          <!-- 5. Tahfidz -->
+          <div
+            class="group relative bg-white p-8 rounded-2xl shadow-xl border border-gray-100 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:border-primary/50"
+          >
+            <span
+              class="absolute inset-0 bg-gradient-to-br from-primary/80 to-secondary/80 opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-[.hover]:opacity-100 rounded-2xl"
+            ></span>
+            <div class="relative z-10 flex flex-col items-center text-center">
+              <div
+                class="flex items-center justify-center w-20 h-20 rounded-full bg-primary text-white mb-6 shadow-md transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 group-[.hover]:scale-110 group-[.hover]:rotate-6"
+              >
+                <i class="fas fa-quran text-3xl"></i>
+              </div>
+              <h3
+                class="text-xl font-bold text-secondary mb-3 transition-colors duration-500 group-hover:text-white group-[.hover]:text-white"
+              >
+                Tahfidz
+              </h3>
+              <p class="text-sm text-gray-600 transition-colors duration-500 group-hover:text-white/90 group-[.hover]:text-white/90">
+                Membimbing anak untuk menghafal ayat-ayat pendek Al-Qur'an dengan metode yang mudah dan menyenangkan.
+              </p>
+            </div>
+          </div>
+
+          <!-- 6. Olahraga -->
+          <div
+            class="group relative bg-white p-8 rounded-2xl shadow-xl border border-gray-100 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:border-primary/50"
+          >
+            <span
+              class="absolute inset-0 bg-gradient-to-br from-primary/80 to-secondary/80 opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-[.hover]:opacity-100 rounded-2xl"
+            ></span>
+            <div class="relative z-10 flex flex-col items-center text-center">
+              <div
+                class="flex items-center justify-center w-20 h-20 rounded-full bg-primary text-white mb-6 shadow-md transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 group-[.hover]:scale-110 group-[.hover]:rotate-6"
+              >
+                <i class="fas fa-basketball-ball text-3xl"></i>
+              </div>
+              <h3
+                class="text-xl font-bold text-secondary mb-3 transition-colors duration-500 group-hover:text-white group-[.hover]:text-white"
+              >
+                Olahraga
+              </h3>
+              <p class="text-sm text-gray-600 transition-colors duration-500 group-hover:text-white/90 group-[.hover]:text-white/90">
+                Mengembangkan kemampuan motorik kasar dan kebugaran fisik anak melalui berbagai aktivitas olahraga dan permainan gerak.
+              </p>
+            </div>
+          </div>
+
+          <!-- 7. Movie Time -->
+          <div
+            class="group relative bg-white p-8 rounded-2xl shadow-xl border border-gray-100 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:border-primary/50"
+          >
+            <span
+              class="absolute inset-0 bg-gradient-to-br from-primary/80 to-secondary/80 opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-[.hover]:opacity-100 rounded-2xl"
+            ></span>
+            <div class="relative z-10 flex flex-col items-center text-center">
+              <div
+                class="flex items-center justify-center w-20 h-20 rounded-full bg-primary text-white mb-6 shadow-md transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 group-[.hover]:scale-110 group-[.hover]:rotate-6"
+              >
+                <i class="fas fa-film text-3xl"></i>
+              </div>
+              <h3
+                class="text-xl font-bold text-secondary mb-3 transition-colors duration-500 group-hover:text-white group-[.hover]:text-white"
+              >
+                Movie Time
+              </h3>
+              <p class="text-sm text-gray-600 transition-colors duration-500 group-hover:text-white/90 group-[.hover]:text-white/90">
+                Menonton film edukatif dan cerita anak yang dipilih secara cermat untuk menstimulasi imajinasi dan moral anak.
+              </p>
+            </div>
+          </div>
+
+          <!-- 8. Outbond -->
+          <div
+            class="group relative bg-white p-8 rounded-2xl shadow-xl border border-gray-100 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:border-primary/50"
+          >
+            <span
+              class="absolute inset-0 bg-gradient-to-br from-primary/80 to-secondary/80 opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-[.hover]:opacity-100 rounded-2xl"
+            ></span>
+            <div class="relative z-10 flex flex-col items-center text-center">
+              <div
+                class="flex items-center justify-center w-20 h-20 rounded-full bg-primary text-white mb-6 shadow-md transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 group-[.hover]:scale-110 group-[.hover]:rotate-6"
+              >
+                <i class="fas fa-hiking text-3xl"></i>
+              </div>
+              <h3
+                class="text-xl font-bold text-secondary mb-3 transition-colors duration-500 group-hover:text-white group-[.hover]:text-white"
+              >
+                Outbond
+              </h3>
+              <p class="text-sm text-gray-600 transition-colors duration-500 group-hover:text-white/90 group-[.hover]:text-white/90">
+                Kegiatan luar ruangan yang seru untuk melatih kemandirian, keberanian, dan kerja sama tim anak.
+              </p>
+            </div>
+          </div>
+
+          <!-- 9. Cooking Class -->
+          <div
+            class="group relative bg-white p-8 rounded-2xl shadow-xl border border-gray-100 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:border-primary/50"
+          >
+            <span
+              class="absolute inset-0 bg-gradient-to-br from-primary/80 to-secondary/80 opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-[.hover]:opacity-100 rounded-2xl"
+            ></span>
+            <div class="relative z-10 flex flex-col items-center text-center">
+              <div
+                class="flex items-center justify-center w-20 h-20 rounded-full bg-primary text-white mb-6 shadow-md transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 group-[.hover]:scale-110 group-[.hover]:rotate-6"
+              >
+                <i class="fas fa-utensils text-3xl"></i>
+              </div>
+              <h3
+                class="text-xl font-bold text-secondary mb-3 transition-colors duration-500 group-hover:text-white group-[.hover]:text-white"
+              >
+                Cooking Class
+              </h3>
+              <p class="text-sm text-gray-600 transition-colors duration-500 group-hover:text-white/90 group-[.hover]:text-white/90">
+                Mengajarkan anak keterampilan dasar memasak dan pentingnya gizi melalui aktivitas dapur yang menyenangkan dan aman.
+              </p>
+            </div>
+          </div>
+
+          <!-- 10. Fun Game -->
+          <div
+            class="group relative bg-white p-8 rounded-2xl shadow-xl border border-gray-100 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:border-primary/50"
+          >
+            <span
+              class="absolute inset-0 bg-gradient-to-br from-primary/80 to-secondary/80 opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-[.hover]:opacity-100 rounded-2xl"
+            ></span>
+            <div class="relative z-10 flex flex-col items-center text-center">
+              <div
+                class="flex items-center justify-center w-20 h-20 rounded-full bg-primary text-white mb-6 shadow-md transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 group-[.hover]:scale-110 group-[.hover]:rotate-6"
+              >
+                <i class="fas fa-gamepad text-3xl"></i>
+              </div>
+              <h3
+                class="text-xl font-bold text-secondary mb-3 transition-colors duration-500 group-hover:text-white group-[.hover]:text-white"
+              >
+                Fun Game
+              </h3>
+              <p class="text-sm text-gray-600 transition-colors duration-500 group-hover:text-white/90 group-[.hover]:text-white/90">
+                Berbagai permainan yang mengasyikkan untuk melatih kemampuan kognitif, sosial, dan fisik anak.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="flex items-center justify-center my-12">
+      <hr class="w-16 h-1 bg-primary rounded-full" />
+      <i class="fas fa-star text-2xl text-primary mx-4"></i>
+      <hr class="w-16 h-1 bg-primary rounded-full" />
+    </div>
+
+    <!-- Statistics Section -->
+    <section
+      id="statistics"
+      class="relative w-full overflow-hidden bg-cover bg-center"
+      style="background-image: url('/image/gedungkbtk.jpg')"
+    >
+      <div class="absolute inset-0 bg-black opacity-60 z-0"></div>
+
+      <div class="max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8 lg:py-20 relative z-10">
+        <dl class="mt-10 text-center sm:max-w-3xl sm:mx-auto sm:grid sm:grid-cols-4 sm:gap-8">
+          <div class="flex flex-col">
+            <dt class="order-2 mt-2 text-lg leading-6 font-medium text-white">Siswa</dt>
+            <dd class="order-1 text-5xl font-extrabold text-white">350+</dd>
+          </div>
+          <div class="flex flex-col mt-10 sm:mt-0">
+            <dt class="order-2 mt-2 text-lg leading-6 font-medium text-white">Guru</dt>
+            <dd class="order-1 text-5xl font-extrabold text-white">40+</dd>
+          </div>
+          <div class="flex flex-col mt-10 sm:mt-0">
+            <dt class="order-2 mt-2 text-lg leading-6 font-medium text-white">Kelas</dt>
+            <dd class="order-1 text-5xl font-extrabold text-white">25</dd>
+          </div>
+          <div class="flex flex-col mt-10 sm:mt-0">
+            <dt class="order-2 mt-2 text-lg leading-6 font-medium text-white">Ekstrakurikuler</dt>
+            <dd class="order-1 text-5xl font-extrabold text-white">10+</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <div class="flex items-center justify-center my-12">
+      <hr class="w-16 h-1 bg-primary rounded-full" />
+      <i class="fas fa-star text-2xl text-primary mx-4"></i>
+      <hr class="w-16 h-1 bg-primary rounded-full" />
+    </div>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="gallery-grid">
+          <!-- Gallery Items -->
+          <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-aos="zoom-in">
+            <img src="image/belajarikhwan1.jpg" alt="Kegiatan Belajar" class="w-full h-48 object-cover" />
+          </div>
+          <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-aos="zoom-in" data-aos-delay="100">
+            <img src="image/belajarakhwat1.jpg" alt="Ekstrakurikuler" class="w-full h-48 object-cover" />
+          </div>
+          <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-aos="zoom-in" data-aos-delay="200">
+            <img src="image/IMG_3454.JPEG" alt="Perpustakaan" class="w-full h-48 object-cover" />
+          </div>
+          <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-aos="zoom-in" data-aos-delay="300">
+            <img src="image/sholat dhuha.jpg" alt="Laboratorium" class="w-full h-48 object-cover" />
+          </div>
+          <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-aos="zoom-in" data-aos-delay="400">
+            <img src="image/swimming class.jpg" alt="Studi Lapangan" class="w-full h-48 object-cover" />
+          </div>
+          <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-aos="zoom-in" data-aos-delay="500">
+            <img src="image/IMG_3091.JPG" alt="Kelas" class="w-full h-48 object-cover" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 contactmap-childish-bg">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Hubungi Kami</h2>
+          <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+          <p class="text-lg text-text max-w-3xl mx-auto">
+            Kami siap menjawab pertanyaan Anda dan memberikan informasi lebih lanjut tentang KB & TK Selfa.
+          </p>
+        </div>
+
+        <div class="flex flex-col lg:flex-row gap-12">
+          <div class="w-full">
+            <div class="bg-light rounded-lg shadow-md p-8 h-full flex flex-col lg:flex-row gap-8">
+              <div class="lg:w-1/2">
+                <h3 class="text-2xl font-bold text-secondary mb-6">Informasi Kontak</h3>
+                <div class="space-y-6">
+                  <div class="flex items-start">
+                    <div
+                      class="w-10 h-10 rounded-full bg-primary bg-opacity-20 flex items-center justify-center mr-4 mt-1 flex-none"
+                      data-aos="fade-right"
+                      data-aos-duration="800"
+                      data-aos-delay="0"
+                    >
+                      <i class="fas fa-map-marker-alt text-primary"></i>
+                    </div>
+                    <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+                      <h4 class="font-bold text-secondary mb-1">Alamat</h4>
+                      <p class="text-text">Jl. Ki Ageng Selo, Krasakan, Jebugan, Kec. Klaten Utara, Kabupaten Klaten, Jawa Tengah 57433</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <div
+                      class="w-10 h-10 rounded-full bg-primary bg-opacity-20 flex items-center justify-center mr-4 mt-1 flex-none"
+                      data-aos="fade-right"
+                      data-aos-duration="800"
+                      data-aos-delay="200"
+                    >
+                      <i class="fas fa-phone-alt text-primary"></i>
+                    </div>
+                    <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="300">
+                      <h4 class="font-bold text-secondary mb-1">Telepon</h4>
+                      <p class="text-text">0811 2653 630 (WhatsApp)</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <div
+                      class="w-10 h-10 rounded-full bg-primary bg-opacity-20 flex items-center justify-center mr-4 mt-1 flex-none"
+                      data-aos="fade-right"
+                      data-aos-duration="800"
+                      data-aos-delay="400"
+                    >
+                      <i class="fas fa-envelope text-primary"></i>
+                    </div>
+                    <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="500">
+                      <h4 class="font-bold text-secondary mb-1">Email</h4>
+                      <p class="text-text">Sayfelfalah@gmail.com</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <div
+                      class="w-10 h-10 rounded-full bg-primary bg-opacity-20 flex items-center justify-center mr-4 mt-1 flex-none"
+                      data-aos="fade-right"
+                      data-aos-duration="800"
+                      data-aos-delay="600"
+                    >
+                      <i class="fas fa-clock text-primary"></i>
+                    </div>
+                    <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="700">
+                      <h4 class="font-bold text-secondary mb-1">Jam Operasional</h4>
+                      <p class="text-text">Senin - Jumat: 07.00 - 16.00 WIB</p>
+                      <p class="text-text">Sabtu: 08.00 - 12.00 WIB</p>
+                      <p class="text-text">Minggu & Hari Libur: Tutup</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-8">
+                  <h4 class="font-bold text-secondary mb-4">Ikuti Kami</h4>
+                  <div class="flex space-x-4">
+                    <a
+                      href="#"
+                      class="w-10 h-10 rounded-full bg-secondary hover:bg-primary text-white flex items-center justify-center transition duration-300"
+                    >
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="w-10 h-10 rounded-full bg-secondary hover:bg-primary text-white flex items-center justify-center transition duration-300"
+                    >
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="w-10 h-10 rounded-full bg-secondary hover:bg-primary text-white flex items-center justify-center transition duration-300"
+                    >
+                      <i class="fab fa-youtube"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="w-10 h-10 rounded-full bg-secondary hover:bg-primary text-white flex items-center justify-center transition duration-300"
+                    >
+                      <i class="fab fa-whatsapp"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="lg:w-1/2">
+                <div class="h-64 lg:h-full bg-gray-200 rounded-lg overflow-hidden">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.11980438448148!2d110.60416700745394!3d-7.692070618370334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a4304e732ea4d%3A0x3a51e9f83b54f632!2sKB%20%26%20TK%20SAYF%20EL%20FALAH!5e0!3m2!1sid!2sid!4v1753072343013!5m2!1sid!2sid"
+                    width="100%"
+                    height="100%"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-12">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="text-xl font-bold font-sans mb-4">Sayf El Falah</h3>
+            <p class="mb-4">Sekolah unggulan dengan pendidikan terpadu yang mengintegrasikan ilmu pengetahuan dan nilai-nilai keislaman.</p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-white hover:text-primary transition"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="text-white hover:text-primary transition"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="text-white hover:text-primary transition"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="text-white hover:text-primary transition"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold font-heading mb-4">Tautan Cepat</h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:text-primary transition">Home</a></li>
+              <li><a href="#visimisi" class="hover:text-primary transition">Visi Misi</a></li>
+              <li><a href="#about" class="hover:text-primary transition">Tentang Kami</a></li>
+              <li><a href="#gallery" class="hover:text-primary transition">Galeri</a></li>
+              <li><a href="#news" class="hover:text-primary transition">Berita</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold font-heading mb-4">Program</h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:text-primary transition">KB TK</a></li>
+              <li><a href="#" class="hover:text-primary transition">SD</a></li>
+              <li><a href="#" class="hover:text-primary transition">Pondok Pesantren</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold font-heading mb-4">Kontak</h3>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                <span>Jl. Pendidikan No. 123, Jakarta Selatan</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-phone mr-3"></i>
+                <span>(021) 7654321</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-envelope mr-3"></i>
+                <span>info@sayfelfalah.sch.id</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+          <p>&copy; 2025 Sayf El Falah. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- AOS Initialization -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

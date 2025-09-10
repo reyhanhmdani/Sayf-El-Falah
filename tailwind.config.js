@@ -6,10 +6,12 @@ module.exports = {
             colors: {
               primary: "#00ab66",
               secondary: "#1a365d",
+              biru: "#0099FF",
+              toskaMuda: "#4ADE80",
               accent: "#f59e0b",
             },
             fontFamily: {
-              heading: ["Playfair Display", "serif"],
+              heading: ["Inter", "sans-serif"],
               body: ["Poppins", "sans-serif"],
             },
           },

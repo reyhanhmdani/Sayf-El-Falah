@@ -7,6 +7,8 @@ body {
   overflow-x: hidden;
 }
 
+/* Index */
+
 .navbar {
   transition: background-color 0.3s ease;
 }
@@ -32,14 +34,7 @@ body {
   color: #00ab66;
 }
 
-.hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/image/selfa.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-}
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -52,11 +47,11 @@ body {
   transform: scale(1.03);
 }
 
-#statistics {
-  background-image: url("/image/selfa.jpg");
-}
 .stat-number {
   font-size: 3.5rem;
   font-weight: 700;
   color: #00ab66;
 }
+
+
+/* KbTK */
