@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SD Alam Sayf El Falah</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="./src/output.css" />
+  </head>
+  <body class="font-body">
+    <!-- Navbar -->
+    <nav class="navbar fixed w-full z-50 py-4">
+      <div class="container mx-auto px-16 flex justify-between items-center">
+        <div class="flex items-center">
+          <span class="logo-text text-white text-2xl font-bold font-sans">SD Alam Selfa</span>
+        </div>
+
+        <div class="hidden md:flex space-x-8">
+          <a href="index" class="nav-link text-white hover:text-primary transition">Home</a>
+          <a href="#about" class="nav-link text-white hover:text-primary transition">About Us</a>
+          <div class="relative group">
+            <button
+              class="nav-link text-white hover:text-primary transition focus:outline-none flex items-center"
+              id="dropdown-btn-desktop"
+            >
+              Program Selfa <i class="fas fa-chevron-down ml-2 text-xs transition-transform duration-300"></i>
+            </button>
+            <div
+              id="dropdown-menu-desktop"
+              class="absolute left-0 mt-2 w-40 bg-white rounded-md shadow-lg py-2 z-20 opacity-0 -translate-y-4 pointer-events-none transition-all duration-300"
+            >
+              <a href="KbTK" class="block px-4 py-2 text-sm text-secondary hover:bg-gray-100 hover:text-primary">KB & TK Selfa</a>
+              <a href="sd" class="block px-4 py-2 text-sm text-secondary hover:bg-gray-100 hover:text-primary">SD Alam Selfa</a>
+              <a href="ponpes" class="block px-4 py-2 text-sm text-secondary hover:bg-gray-100 hover:text-primary">Pondok Pesantren</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-white focus:outline-none">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="md:hidden bg-white py-4 px-6 absolute top-full left-0 w-full shadow-lg transition-all duration-300 ease-in-out opacity-0 -translate-y-4 pointer-events-none"
+      >
+        <a href="index" class="block py-2 text-secondary hover:text-primary">Home</a>
+        <a href="#about" class="block py-2 text-secondary hover:text-primary">About Us</a>
+
+        <button
+          class="block w-full text-left py-2 text-secondary hover:text-primary transition focus:outline-none"
+          id="dropdown-btn-mobile"
+        >
+          Program Selfa <i class="fas fa-chevron-down ml-2 text-xs transition-transform duration-300"></i>
+        </button>
+        <div id="dropdown-menu-mobile" class="hidden pl-4 py-2 space-y-2">
+          <a href="KbTK" class="block text-secondary hover:text-primary">KB & TK Selfa</a>
+          <a href="sd" class="block text-secondary hover:text-primary">SD Alam Selfa</a>
+          <a href="ponpes" class="block text-secondary hover:text-primary">Pondok Pesantren</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative w-full h-screen flex items-center justify-center">
+      <div class="absolute inset-0 z-0 bg-cover bg-center" style="background-image: url('/image/gedung\ Sd.jpg')"></div>
+
+      <div class="absolute inset-0 z-10 bg-black opacity-60"></div>
+
+      <div class="relative z-20 container mx-auto px-6 text-center text-white" data-aos="fade-up">
+        <h1 class="text-4xl md:text-6xl font-bold font-heading mb-4">Selamat Datang di SD Alam</h1>
+        <h1 class="text-5xl md:text-8xl font-bold font-sans mb-4 text-primary">Sayf El Falah</h1>
+        <p class="text-xl md:text-2xl mb-8">
+          Membentuk generasi cerdas, kreatif, dan berakhlak mulia melalui pendidikan usia dini yang menyenangkan.
+        </p>
+      </div>
+    </header>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold font-heading text-center text-secondary mb-16" data-aos="fade-up">
+          Tentang Sekolah SD Alam <span class="text-primary">Selfa</span>
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div data-aos="fade-right">
+            <img src="image/P1410680.JPG" alt="Gedung Sekolah Sayf El Falah" class="rounded-lg shadow-lg" />
+          </div>
+
+          <div data-aos="fade-left">
+            <h3 class="text-2xl font-bold font-heading text-secondary mb-4">Visi</h3>
+            <p class="text-gray-700 mb-6">
+              Menjadi Sekolah yang membantu setiap anak tumbuh sesuai fitrahnya, hingga menjadi manusia utuh yang mampu menjadi pemimpin dan
+              rahmat bagi dunia sesuai keinginan Allah Ta'ala dan Rasulullah shollallahu alaihi wa sallam
+            </p>
+
+            <h3 class="text-2xl font-bold font-heading text-secondary mb-4">Misi</h3>
+            <ul class="text-gray-700 space-y-3">
+              <li class="flex items-start">
+                <i class="fas fa-star text-accent mt-1 mr-3"></i>
+                <span
+                  >Menyediakan metode pembelajaran yang mengembangkan dan menyentuh seluruh aspek dasar manusia meliputi akal, rasa, fisik,
+                  mental dan sosial
+                </span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-star text-accent mt-1 mr-3"></i>
+                <span
+                  >Menjadi tempat tumbuh terbaik bagi anak di masa depan keemasannya dengan memberikan beragam pengalaman kehidupan yang di
+                  butuhkan di masa depan</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="flex items-center justify-center my-12">
+      <hr class="w-16 h-1 bg-primary rounded-full" />
+      <i class="fas fa-star text-2xl text-primary mx-4"></i>
+      <hr class="w-16 h-1 bg-primary rounded-full" />
+    </div>
+
+    <!-- Program SD Section -->
+    <section id="program-sd" class="py-16 md:py-24 bg-slate-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold font-heading text-secondary mb-4" data-aos="fade-up">Program SD Alam Selfa</h2>
+          <div class="w-20 h-1 bg-primary mx-auto mb-6" data-aos="fade-up" data-aos-delay="100"></div>
+        </div>
+
+        <div class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 md:gap-8">
+          <div
+            class="group relative cursor-pointer overflow-hidden px-4 pt-6 pb-6 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl rounded-lg card-observe z-20"
+          >
+            <span
+              class="absolute top-6 left-1/2 -translate-x-1/2 z-0 h-16 w-16 rounded-full bg-gradient-to-r from-primary to-biru transition-all duration-1000 group-hover:scale-[10] group-hover:opacity-100 group-[.hover]:scale-[10] group-[.hover]:opacity-100"
+            ></span>
+
+            <div class="relative z-10 w-full text-center">
+              <span
+                class="grid h-16 w-16 mx-auto place-items-center rounded-full border border-primary bg-white transition-all duration-300"
+              >
+                <i
+                  class="fa-solid fa-chalkboard-user text-2xl text-primary transition-transform group-hover:scale-110 group-[.hover]:scale-110"
+                ></i>
+              </span>
+              <h3
+                class="mt-2 text-xs md:text-sm font-bold text-secondary transition-colors group-hover:text-white group-[.hover]:text-white"
+              >
+                Meet The Expert
+              </h3>
+            </div>
+          </div>
+          <div
+            class="group relative cursor-pointer overflow-hidden px-4 pt-6 pb-6 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl rounded-lg card-observe z-20"
+          >
+            <span
+              class="absolute top-6 left-1/2 -translate-x-1/2 z-0 h-16 w-16 rounded-full bg-gradient-to-r from-primary to-biru transition-all duration-1000 group-hover:scale-[10] group-hover:opacity-100 group-[.hover]:scale-[10] group-[.hover]:opacity-100"
+            ></span>
+
+            <div class="relative z-10 w-full text-center">
+              <span
+                class="grid h-16 w-16 mx-auto place-items-center rounded-full border border-primary bg-white transition-all duration-300"
+              >
+                <i
+                  class="fa-solid fa-people-roof text-2xl text-primary transition-transform group-hover:scale-110 group-[.hover]:scale-110"
+                ></i>
+              </span>
+              <h3
+                class="mt-2 text-xs md:text-sm font-bold text-secondary transition-colors group-hover:text-white group-[.hover]:text-white"
+              >
+                Outbond
+              </h3>
+            </div>
+          </div>
+          <div
+            class="group relative cursor-pointer overflow-hidden px-4 pt-6 pb-6 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl rounded-lg card-observe z-20"
+          >
+            <span
+              class="absolute top-6 left-1/2 -translate-x-1/2 z-0 h-16 w-16 rounded-full bg-gradient-to-r from-primary to-biru transition-all duration-1000 group-hover:scale-[10] group-hover:opacity-100 group-[.hover]:scale-[10] group-[.hover]:opacity-100"
+            ></span>
+
+            <div class="relative z-10 w-full text-center">
+              <span
+                class="grid h-16 w-16 mx-auto place-items-center rounded-full border border-primary bg-white transition-all duration-300"
+              >
+                <i
+                  class="fa-solid fa-seedling text-2xl text-primary transition-transform group-hover:scale-110 group-[.hover]:scale-110"
+                ></i>
+              </span>
+              <h3
+                class="mt-2 text-xs md:text-sm font-bold text-secondary transition-colors group-hover:text-white group-[.hover]:text-white"
+              >
+                Happy Farming
+              </h3>
+            </div>
+          </div>
+          <div
+            class="group relative cursor-pointer overflow-hidden px-4 pt-6 pb-6 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl rounded-lg card-observe z-20"
+          >
+            <span
+              class="absolute top-6 left-1/2 -translate-x-1/2 z-0 h-16 w-16 rounded-full bg-gradient-to-r from-primary to-biru transition-all duration-1000 group-hover:scale-[10] group-hover:opacity-100 group-[.hover]:scale-[10] group-[.hover]:opacity-100"
+            ></span>
+
+            <div class="relative z-10 w-full text-center">
+              <span
+                class="grid h-16 w-16 mx-auto place-items-center rounded-full border border-primary bg-white transition-all duration-300"
+              >
+                <i
+                  class="fa-solid fa-campground text-2xl text-primary transition-transform group-hover:scale-110 group-[.hover]:scale-110"
+                ></i>
+              </span>
+              <h3
+                class="mt-2 text-xs md:text-sm font-bold text-secondary transition-colors group-hover:text-white group-[.hover]:text-white"
+              >
+                Camping
+              </h3>
+            </div>
+          </div>
+          <div
+            class="group relative cursor-pointer overflow-hidden px-4 pt-6 pb-6 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl rounded-lg card-observe z-20"
+          >
+            <span
+              class="absolute top-6 left-1/2 -translate-x-1/2 z-0 h-16 w-16 rounded-full bg-gradient-to-r from-primary to-biru transition-all duration-1000 group-hover:scale-[10] group-hover:opacity-100 group-[.hover]:scale-[10] group-[.hover]:opacity-100"
+            ></span>
+
+            <div class="relative z-10 w-full text-center">
+              <span
+                class="grid h-16 w-16 mx-auto place-items-center rounded-full border border-primary bg-white transition-all duration-300"
+              >
+                <i class="fa-solid fa-dove text-2xl text-primary transition-transform group-hover:scale-110 group-[.hover]:scale-110"></i>
+              </span>
+              <h3
+                class="mt-2 text-xs md:text-sm font-bold text-secondary transition-colors group-hover:text-white group-[.hover]:text-white"
+              >
+                Animal Breeding
+              </h3>
+            </div>
+          </div>
+          <div
+            class="group relative cursor-pointer overflow-hidden px-4 pt-6 pb-6 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl rounded-lg card-observe z-20"
+          >
+            <span
+              class="absolute top-6 left-1/2 -translate-x-1/2 z-0 h-16 w-16 rounded-full bg-gradient-to-r from-primary to-biru transition-all duration-1000 group-hover:scale-[10] group-hover:opacity-100 group-[.hover]:scale-[10] group-[.hover]:opacity-100"
+            ></span>
+
+            <div class="relative z-10 w-full text-center">
+              <span
+                class="grid h-16 w-16 mx-auto place-items-center rounded-full border border-primary bg-white transition-all duration-300"
+              >
+                <i class="fa-solid fa-coins text-2xl text-primary transition-transform group-hover:scale-110 group-[.hover]:scale-110"></i>
+              </span>
+              <h3
+                class="mt-2 text-xs md:text-sm font-bold text-secondary transition-colors group-hover:text-white group-[.hover]:text-white"
+              >
+                Financial Literacy
+              </h3>
+            </div>
+          </div>
+          <div
+            class="group relative cursor-pointer overflow-hidden px-4 pt-6 pb-6 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl rounded-lg card-observe z-20"
+          >
+            <span
+              class="absolute top-6 left-1/2 -translate-x-1/2 z-0 h-16 w-16 rounded-full bg-gradient-to-r from-primary to-biru transition-all duration-1000 group-hover:scale-[10] group-hover:opacity-100 group-[.hover]:scale-[10] group-[.hover]:opacity-100"
+            ></span>
+
+            <div class="relative z-10 w-full text-center">
+              <span
+                class="grid h-16 w-16 mx-auto place-items-center rounded-full border border-primary bg-white transition-all duration-300"
+              >
+                <i
+                  class="fa-solid fa-person-hiking text-2xl text-primary transition-transform group-hover:scale-110 group-[.hover]:scale-110"
+                ></i>
+              </span>
+              <h3
+                class="mt-2 text-xxs md:text-sm font-bold text-secondary transition-colors group-hover:text-white group-[.hover]:text-white"
+              >
+                SASS (Sekolah Alam Student Scout)
+              </h3>
+            </div>
+          </div>
+          <div
+            class="group relative cursor-pointer overflow-hidden px-4 pt-6 pb-6 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl rounded-lg card-observe z-20"
+          >
+            <span
+              class="absolute top-6 left-1/2 -translate-x-1/2 z-0 h-16 w-16 rounded-full bg-gradient-to-r from-primary to-biru transition-all duration-1000 group-hover:scale-[10] group-hover:opacity-100 group-[.hover]:scale-[10] group-[.hover]:opacity-100"
+            ></span>
+
+            <div class="relative z-10 w-full text-center">
+              <span
+                class="grid h-16 w-16 mx-auto place-items-center rounded-full border border-primary bg-white transition-all duration-300"
+              >
+                <i
+                  class="fa-solid fa-computer text-2xl text-primary transition-transform group-hover:scale-110 group-[.hover]:scale-110"
+                ></i>
+              </span>
+              <h3
+                class="mt-2 text-xs md:text-sm font-bold text-secondary transition-colors group-hover:text-white group-[.hover]:text-white"
+              >
+                Digital, Internet & I.T
+              </h3>
+            </div>
+          </div>
+          <div
+            class="group relative cursor-pointer overflow-hidden px-4 pt-6 pb-6 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl rounded-lg card-observe z-20"
+          >
+            <span
+              class="absolute top-6 left-1/2 -translate-x-1/2 z-0 h-16 w-16 rounded-full bg-gradient-to-r from-primary to-biru transition-all duration-1000 group-hover:scale-[10] group-hover:opacity-100 group-[.hover]:scale-[10] group-[.hover]:opacity-100"
+            ></span>
+
+            <div class="relative z-10 w-full text-center">
+              <span
+                class="grid h-16 w-16 mx-auto place-items-center rounded-full border border-primary bg-white transition-all duration-300"
+              >
+                <i
+                  class="fa-solid fa-user-tie text-2xl text-primary transition-transform group-hover:scale-110 group-[.hover]:scale-110"
+                ></i>
+              </span>
+              <h3
+                class="mt-2 text-xs md:text-sm font-bold text-secondary transition-colors group-hover:text-white group-[.hover]:text-white"
+              >
+                Leadership
+              </h3>
+            </div>
+          </div>
+          <div
+            class="group relative cursor-pointer overflow-hidden px-4 pt-6 pb-6 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl rounded-lg card-observe z-20"
+          >
+            <span
+              class="absolute top-6 left-1/2 -translate-x-1/2 z-0 h-16 w-16 rounded-full bg-gradient-to-r from-primary to-biru transition-all duration-1000 group-hover:scale-[10] group-hover:opacity-100 group-[.hover]:scale-[10] group-[.hover]:opacity-100"
+            ></span>
+
+            <div class="relative z-10 w-full text-center">
+              <span
+                class="grid h-16 w-16 mx-auto place-items-center rounded-full border border-primary bg-white transition-all duration-300"
+              >
+                <i
+                  class="fa-solid fa-handshake text-2xl text-primary transition-transform group-hover:scale-110 group-[.hover]:scale-110"
+                ></i>
+              </span>
+              <h3
+                class="mt-2 text-xs md:text-sm font-bold text-secondary transition-colors group-hover:text-white group-[.hover]:text-white"
+              >
+                Talk To Investor
+              </h3>
+            </div>
+          </div>
+          <div
+            class="group relative cursor-pointer overflow-hidden px-4 pt-6 pb-6 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl rounded-lg card-observe z-20"
+          >
+            <span
+              class="absolute top-6 left-1/2 -translate-x-1/2 z-0 h-16 w-16 rounded-full bg-gradient-to-r from-primary to-biru transition-all duration-1000 group-hover:scale-[10] group-hover:opacity-100 group-[.hover]:scale-[10] group-[.hover]:opacity-100"
+            ></span>
+
+            <div class="relative z-10 w-full text-center">
+              <span
+                class="grid h-16 w-16 mx-auto place-items-center rounded-full border border-primary bg-white transition-all duration-300"
+              >
+                <i
+                  class="fa-solid fa-book-quran text-2xl text-primary transition-transform group-hover:scale-110 group-[.hover]:scale-110"
+                ></i>
+              </span>
+              <h3
+                class="mt-2 text-xs md:text-sm font-bold text-secondary transition-colors group-hover:text-white group-[.hover]:text-white"
+              >
+                Story Telling Islamic History
+              </h3>
+            </div>
+          </div>
+          <div
+            class="group relative cursor-pointer overflow-hidden px-4 pt-6 pb-6 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl rounded-lg card-observe z-20"
+          >
+            <span
+              class="absolute top-6 left-1/2 -translate-x-1/2 z-0 h-16 w-16 rounded-full bg-gradient-to-r from-primary to-biru transition-all duration-1000 group-hover:scale-[10] group-hover:opacity-100 group-[.hover]:scale-[10] group-[.hover]:opacity-100"
+            ></span>
+
+            <div class="relative z-10 w-full text-center">
+              <span
+                class="grid h-16 w-16 mx-auto place-items-center rounded-full border border-primary bg-white transition-all duration-300"
+              >
+                <i
+                  class="fa-solid fa-face-smile-beam text-2xl text-primary transition-transform group-hover:scale-110 group-[.hover]:scale-110"
+                ></i>
+              </span>
+              <h3
+                class="mt-2 text-xs md:text-sm font-bold text-secondary transition-colors group-hover:text-white group-[.hover]:text-white"
+              >
+                Fun Learning
+              </h3>
+            </div>
+          </div>
+          <div
+            class="group relative cursor-pointer overflow-hidden px-4 pt-6 pb-6 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl rounded-lg card-observe z-20"
+          >
+            <span
+              class="absolute top-6 left-1/2 -translate-x-1/2 z-0 h-16 w-16 rounded-full bg-gradient-to-r from-primary to-biru transition-all duration-1000 group-hover:scale-[10] group-hover:opacity-100 group-[.hover]:scale-[10] group-[.hover]:opacity-100"
+            ></span>
+
+            <div class="relative z-10 w-full text-center">
+              <span
+                class="grid h-16 w-16 mx-auto place-items-center rounded-full border border-primary bg-white transition-all duration-300"
+              >
+                <i
+                  class="fa-solid fa-users-gear text-2xl text-primary transition-transform group-hover:scale-110 group-[.hover]:scale-110"
+                ></i>
+              </span>
+              <h3
+                class="mt-2 text-xs md:text-sm font-bold text-secondary transition-colors group-hover:text-white group-[.hover]:text-white"
+              >
+                Parents Mastermind
+              </h3>
+            </div>
+          </div>
+          <div
+            class="group relative cursor-pointer overflow-hidden px-4 pt-6 pb-6 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl rounded-lg card-observe z-20"
+          >
+            <span
+              class="absolute top-6 left-1/2 -translate-x-1/2 z-0 h-16 w-16 rounded-full bg-gradient-to-r from-primary to-biru transition-all duration-1000 group-hover:scale-[10] group-hover:opacity-100 group-[.hover]:scale-[10] group-[.hover]:opacity-100"
+            ></span>
+
+            <div class="relative z-10 w-full text-center">
+              <span
+                class="grid h-16 w-16 mx-auto place-items-center rounded-full border border-primary bg-white transition-all duration-300"
+              >
+                <i class="fa-solid fa-bed text-2xl text-primary transition-transform group-hover:scale-110 group-[.hover]:scale-110"></i>
+              </span>
+              <h3
+                class="mt-2 text-xs md:text-sm font-bold text-secondary transition-colors group-hover:text-white group-[.hover]:text-white"
+              >
+                Qailullah
+              </h3>
+            </div>
+          </div>
+          <div
+            class="group relative cursor-pointer overflow-hidden px-4 pt-6 pb-6 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl rounded-lg card-observe z-20"
+          >
+            <span
+              class="absolute top-6 left-1/2 -translate-x-1/2 z-0 h-16 w-16 rounded-full bg-gradient-to-r from-primary to-biru transition-all duration-1000 group-hover:scale-[10] group-hover:opacity-100 group-[.hover]:scale-[10] group-[.hover]:opacity-100"
+            ></span>
+
+            <div class="relative z-10 w-full text-center">
+              <span
+                class="grid h-16 w-16 mx-auto place-items-center rounded-full border border-primary bg-white transition-all duration-300"
+              >
+                <i class="fa-solid fa-quran text-2xl text-primary transition-transform group-hover:scale-110 group-[.hover]:scale-110"></i>
+              </span>
+              <h3
+                class="mt-2 text-xs md:text-sm font-bold text-secondary transition-colors group-hover:text-white group-[.hover]:text-white"
+              >
+                Quranic Based Curriculum
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="flex items-center justify-center my-12">
+      <hr class="w-16 h-1 bg-primary rounded-full" />
+      <i class="fas fa-star text-2xl text-primary mx-4"></i>
+      <hr class="w-16 h-1 bg-primary rounded-full" />
+    </div>
+
+    <!-- Statistics Section -->
+    <section
+      id="statistics"
+      class="relative w-full overflow-hidden bg-cover bg-center"
+      style="background-image: url('/image/gedung\ Sd.jpg')"
+    >
+      <div class="absolute inset-0 bg-black opacity-60 z-0"></div>
+
+      <div class="max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8 lg:py-20 relative z-10">
+        <dl class="mt-10 text-center sm:max-w-3xl sm:mx-auto sm:grid sm:grid-cols-4 sm:gap-8">
+          <div class="flex flex-col">
+            <dt class="order-2 mt-2 text-lg leading-6 font-medium text-white">Siswa</dt>
+            <dd class="order-1 text-5xl font-extrabold text-white">350+</dd>
+          </div>
+          <div class="flex flex-col mt-10 sm:mt-0">
+            <dt class="order-2 mt-2 text-lg leading-6 font-medium text-white">Guru</dt>
+            <dd class="order-1 text-5xl font-extrabold text-white">40+</dd>
+          </div>
+          <div class="flex flex-col mt-10 sm:mt-0">
+            <dt class="order-2 mt-2 text-lg leading-6 font-medium text-white">Kelas</dt>
+            <dd class="order-1 text-5xl font-extrabold text-white">25</dd>
+          </div>
+          <div class="flex flex-col mt-10 sm:mt-0">
+            <dt class="order-2 mt-2 text-lg leading-6 font-medium text-white">Ekstrakurikuler</dt>
+            <dd class="order-1 text-5xl font-extrabold text-white">10+</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <div class="flex items-center justify-center my-12">
+      <hr class="w-16 h-1 bg-primary rounded-full" />
+      <i class="fas fa-star text-2xl text-primary mx-4"></i>
+      <hr class="w-16 h-1 bg-primary rounded-full" />
+    </div>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="gallery-grid grid grid-cols-2 md:grid-cols-4 gap-6">
+          <!-- Gallery Items -->
+          <div class="gallery-item rounded-lg overflow-hidden shadow-lg cursor-pointer" data-index="0">
+            <img src="image/belajarikhwan1.jpg" alt="Kegiatan Belajar" class="w-full h-48 object-cover" />
+          </div>
+          <div class="gallery-item rounded-lg overflow-hidden shadow-lg cursor-pointer" data-index="1">
+            <img src="image/belajarakhwat1.jpg" alt="Ekstrakurikuler" class="w-full h-48 object-cover" />
+          </div>
+          <div class="gallery-item rounded-lg overflow-hidden shadow-lg cursor-pointer" data-index="2">
+            <img src="image/IMG_3454.JPEG" alt="Perpustakaan" class="w-full h-48 object-cover" />
+          </div>
+          <div class="gallery-item rounded-lg overflow-hidden shadow-lg cursor-pointer" data-index="3">
+            <img src="image/sholat dhuha.jpg" alt="Laboratorium" class="w-full h-48 object-cover" />
+          </div>
+          <div class="gallery-item rounded-lg overflow-hidden shadow-lg cursor-pointer" data-index="4">
+            <img src="image/swimming class.jpg" alt="Studi Lapangan" class="w-full h-48 object-cover" />
+          </div>
+          <div class="gallery-item rounded-lg overflow-hidden shadow-lg cursor-pointer" data-index="5">
+            <img src="image/IMG_3091.JPG" alt="Kelas" class="w-full h-48 object-cover" />
+          </div>
+          <div class="gallery-item rounded-lg overflow-hidden shadow-lg cursor-pointer" data-index="6">
+            <img src="image/gambar_bersama.jpg" alt="Kelas" class="w-full h-48 object-cover" />
+          </div>
+          <div class="gallery-item rounded-lg overflow-hidden shadow-lg cursor-pointer" data-index="7">
+            <img src="image/hadrahikhwan1.jpg" alt="Kelas" class="w-full h-48 object-cover" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 bg-black/90 hidden flex-col items-center justify-center z-50">
+      <button id="closeLightbox" class="absolute top-6 right-6 text-white text-3xl">&times;</button>
+      <button id="prevImage" class="absolute left-6 text-white text-3xl">&#10094;</button>
+      <img id="lightboxImage" src="" alt="Preview" class="max-h-[70vh] max-w-[90vw] rounded-lg shadow-2xl mb-4" />
+      <button id="nextImage" class="absolute right-6 text-white text-3xl">&#10095;</button>
+
+      <!-- Thumbnails -->
+      <div id="lightboxThumbnails" class="flex gap-2 overflow-x-auto max-w-[90vw] mt-4 p-2">
+        <!-- Akan diisi thumbnail otomatis -->
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 contactmap-childish-bg">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Hubungi Kami</h2>
+          <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+          <p class="text-lg text-text max-w-3xl mx-auto">
+            Kami siap menjawab pertanyaan Anda dan memberikan informasi lebih lanjut tentang KB & TK Selfa.
+          </p>
+        </div>
+
+        <div class="flex flex-col lg:flex-row gap-12">
+          <div class="w-full">
+            <div class="bg-light rounded-lg shadow-md p-8 h-full flex flex-col lg:flex-row gap-8">
+              <div class="lg:w-1/2">
+                <h3 class="text-2xl font-bold text-secondary mb-6">Informasi Kontak</h3>
+                <div class="space-y-6">
+                  <div class="flex items-start">
+                    <div
+                      class="w-10 h-10 rounded-full bg-primary bg-opacity-20 flex items-center justify-center mr-4 mt-1 flex-none"
+                      data-aos="fade-right"
+                      data-aos-duration="800"
+                      data-aos-delay="0"
+                    >
+                      <i class="fas fa-map-marker-alt text-primary"></i>
+                    </div>
+                    <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+                      <h4 class="font-bold text-secondary mb-1">Alamat</h4>
+                      <p class="text-text">Jl. Ki Ageng Selo, Krasakan, Jebugan, Kec. Klaten Utara, Kabupaten Klaten, Jawa Tengah 57433</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <div
+                      class="w-10 h-10 rounded-full bg-primary bg-opacity-20 flex items-center justify-center mr-4 mt-1 flex-none"
+                      data-aos="fade-right"
+                      data-aos-duration="800"
+                      data-aos-delay="200"
+                    >
+                      <i class="fas fa-phone-alt text-primary"></i>
+                    </div>
+                    <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="300">
+                      <h4 class="font-bold text-secondary mb-1">Telepon</h4>
+                      <p class="text-text">0811 2653 630 (WhatsApp)</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <div
+                      class="w-10 h-10 rounded-full bg-primary bg-opacity-20 flex items-center justify-center mr-4 mt-1 flex-none"
+                      data-aos="fade-right"
+                      data-aos-duration="800"
+                      data-aos-delay="400"
+                    >
+                      <i class="fas fa-envelope text-primary"></i>
+                    </div>
+                    <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="500">
+                      <h4 class="font-bold text-secondary mb-1">Email</h4>
+                      <p class="text-text">Sayfelfalah@gmail.com</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <div
+                      class="w-10 h-10 rounded-full bg-primary bg-opacity-20 flex items-center justify-center mr-4 mt-1 flex-none"
+                      data-aos="fade-right"
+                      data-aos-duration="800"
+                      data-aos-delay="600"
+                    >
+                      <i class="fas fa-clock text-primary"></i>
+                    </div>
+                    <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="700">
+                      <h4 class="font-bold text-secondary mb-1">Jam Operasional</h4>
+                      <p class="text-text">Senin - Jumat: 07.00 - 16.00 WIB</p>
+                      <p class="text-text">Sabtu: 08.00 - 12.00 WIB</p>
+                      <p class="text-text">Minggu & Hari Libur: Tutup</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-8">
+                  <h4 class="font-bold text-secondary mb-4">Ikuti Kami</h4>
+                  <div class="flex space-x-4">
+                    <a
+                      href="#"
+                      class="w-10 h-10 rounded-full bg-secondary hover:bg-primary text-white flex items-center justify-center transition duration-300"
+                    >
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="w-10 h-10 rounded-full bg-secondary hover:bg-primary text-white flex items-center justify-center transition duration-300"
+                    >
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="w-10 h-10 rounded-full bg-secondary hover:bg-primary text-white flex items-center justify-center transition duration-300"
+                    >
+                      <i class="fab fa-youtube"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="w-10 h-10 rounded-full bg-secondary hover:bg-primary text-white flex items-center justify-center transition duration-300"
+                    >
+                      <i class="fab fa-whatsapp"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="lg:w-1/2">
+                <div class="h-64 lg:h-full bg-gray-200 rounded-lg overflow-hidden">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.002754723333!2d110.59855107326445!3d-7.682850676058566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a435be390e88f%3A0x56c6df479b7dcb9!2sSekolah%20Alam%20Selfa!5e0!3m2!1sid!2sid!4v1756700327534!5m2!1sid!2sid"
+                    width="100%"
+                    height="100%"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-12">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="text-xl font-bold font-sans mb-4">Sayf El Falah</h3>
+            <p class="mb-4">Sekolah unggulan dengan pendidikan terpadu yang mengintegrasikan ilmu pengetahuan dan nilai-nilai keislaman.</p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-white hover:text-primary transition"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="text-white hover:text-primary transition"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="text-white hover:text-primary transition"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="text-white hover:text-primary transition"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold font-heading mb-4">Tautan Cepat</h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="hover:text-primary transition">Home</a></li>
+              <li><a href="#visimisi" class="hover:text-primary transition">Visi Misi</a></li>
+              <li><a href="#about" class="hover:text-primary transition">Tentang Kami</a></li>
+              <li><a href="#gallery" class="hover:text-primary transition">Galeri</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold font-heading mb-4">Program</h3>
+            <ul class="space-y-2">
+              <li><a href="KbTK" class="hover:text-primary transition">KB TK</a></li>
+              <li><a href="sd" class="hover:text-primary transition">SD</a></li>
+              <li><a href="ponpes" class="hover:text-primary transition">Pondok Pesantren</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold font-heading mb-4">Kontak</h3>
+            <ul class="space-y-2">
+              <li class="flex items-start">
+                <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                <span>Jl. Pendidikan No. 123, Jakarta Selatan</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-phone mr-3"></i>
+                <span>(021) 7654321</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-envelope mr-3"></i>
+                <span>info@sayfelfalah.sch.id</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+          <p>&copy; 2025 Sayf El Falah. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- AOS Initialization -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

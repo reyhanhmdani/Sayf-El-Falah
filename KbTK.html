@@ -28,7 +28,7 @@
         </div>
 
         <div class="hidden md:flex space-x-8">
-          <a href="index.html" class="nav-link text-white hover:text-primary transition">Home</a>
+          <a href="index" class="nav-link text-white hover:text-primary transition">Home</a>
           <a href="#about" class="nav-link text-white hover:text-primary transition">About Us</a>
           <div class="relative group">
             <button
@@ -437,29 +437,48 @@
     <!-- Gallery Section -->
     <section id="gallery" class="py-20 bg-gray-50">
       <div class="container mx-auto px-6">
-        <div class="gallery-grid">
+        <div class="gallery-grid grid grid-cols-2 md:grid-cols-4 gap-6">
           <!-- Gallery Items -->
-          <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-aos="zoom-in">
+          <div class="gallery-item rounded-lg overflow-hidden shadow-lg cursor-pointer" data-index="0">
             <img src="image/belajarikhwan1.jpg" alt="Kegiatan Belajar" class="w-full h-48 object-cover" />
           </div>
-          <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-aos="zoom-in" data-aos-delay="100">
+          <div class="gallery-item rounded-lg overflow-hidden shadow-lg cursor-pointer" data-index="1">
             <img src="image/belajarakhwat1.jpg" alt="Ekstrakurikuler" class="w-full h-48 object-cover" />
           </div>
-          <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-aos="zoom-in" data-aos-delay="200">
+          <div class="gallery-item rounded-lg overflow-hidden shadow-lg cursor-pointer" data-index="2">
             <img src="image/IMG_3454.JPEG" alt="Perpustakaan" class="w-full h-48 object-cover" />
           </div>
-          <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-aos="zoom-in" data-aos-delay="300">
+          <div class="gallery-item rounded-lg overflow-hidden shadow-lg cursor-pointer" data-index="3">
             <img src="image/sholat dhuha.jpg" alt="Laboratorium" class="w-full h-48 object-cover" />
           </div>
-          <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-aos="zoom-in" data-aos-delay="400">
+          <div class="gallery-item rounded-lg overflow-hidden shadow-lg cursor-pointer" data-index="4">
             <img src="image/swimming class.jpg" alt="Studi Lapangan" class="w-full h-48 object-cover" />
           </div>
-          <div class="gallery-item rounded-lg overflow-hidden shadow-lg" data-aos="zoom-in" data-aos-delay="500">
+          <div class="gallery-item rounded-lg overflow-hidden shadow-lg cursor-pointer" data-index="5">
             <img src="image/IMG_3091.JPG" alt="Kelas" class="w-full h-48 object-cover" />
+          </div>
+          <div class="gallery-item rounded-lg overflow-hidden shadow-lg cursor-pointer" data-index="6">
+            <img src="image/gambar_bersama.jpg" alt="Kelas" class="w-full h-48 object-cover" />
+          </div>
+          <div class="gallery-item rounded-lg overflow-hidden shadow-lg cursor-pointer" data-index="7">
+            <img src="image/hadrahikhwan1.jpg" alt="Kelas" class="w-full h-48 object-cover" />
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 bg-black/90 hidden flex-col items-center justify-center z-50">
+      <button id="closeLightbox" class="absolute top-6 right-6 text-white text-3xl">&times;</button>
+      <button id="prevImage" class="absolute left-6 text-white text-3xl">&#10094;</button>
+      <img id="lightboxImage" src="" alt="Preview" class="max-h-[70vh] max-w-[90vw] rounded-lg shadow-2xl mb-4" />
+      <button id="nextImage" class="absolute right-6 text-white text-3xl">&#10095;</button>
+
+      <!-- Thumbnails -->
+      <div id="lightboxThumbnails" class="flex gap-2 overflow-x-auto max-w-[90vw] mt-4 p-2">
+        <!-- Akan diisi thumbnail otomatis -->
+      </div>
+    </div>
 
     <!-- Contact Section -->
     <section id="contact" class="py-16 md:py-24 contactmap-childish-bg">

@@ -128,7 +128,7 @@ function autoHoverCards(sectionId, mode = "center") {
             }
           });
         },
-        { root: null, threshold: 0.6 }
+        { root: null, threshold: 1.0 }
       );
 
       cards.forEach((card) => observer.observe(card));
@@ -144,7 +144,7 @@ function autoHoverCards(sectionId, mode = "center") {
 autoHoverCards("#program", "center");
 
 // KB-TK
-autoHoverCards("#program-kbtk", "observer");
+autoHoverCards("#program-kbtk", "center");
 
 // SD
 autoHoverCards("#program-sd", "observer");

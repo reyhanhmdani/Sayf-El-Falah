@@ -2,18 +2,26 @@
 module.exports = {
   content: ["./*.{html,js}", "./src/**/*.{html,js}"],
   theme: {
-          extend: {
-            colors: {
-              primary: "#00ab66",
-              secondary: "#1a365d",
-              biru: "#0099FF",
-              toskaMuda: "#4ADE80",
-              accent: "#f59e0b",
-            },
-            fontFamily: {
-              heading: ["Inter", "sans-serif"],
-              body: ["Poppins", "sans-serif"],
-            },
+    extend: {
+      colors: {
+        primary: "#00ab66",
+        secondary: "#1a365d",
+        biru: "#0099FF",
+        toskaMuda: "#4ADE80",
+        accent: "#f59e0b",
+      },
+      fontFamily: {
+        heading: ["Inter", "sans-serif"],
+        body: ["Poppins", "sans-serif"],
+      },
+      fontSize: {
+        xxs: [
+          "0.625rem",
+          {
+            lineHeight: "0.875rem",
           },
-        },
+        ],
+      },
+    },
+  },
 };
