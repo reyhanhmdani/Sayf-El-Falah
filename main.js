@@ -128,7 +128,7 @@ function autoHoverCards(sectionId, mode = "center") {
             }
           });
         },
-        { root: null, threshold: 1.0 }
+        { root: null, threshold: 0.9 }
       );
 
       cards.forEach((card) => observer.observe(card));
@@ -214,4 +214,34 @@ document.addEventListener("DOMContentLoaded", () => {
   lightbox.addEventListener("click", (e) => {
     if (e.target === lightbox) closeLightbox();
   });
+});
+
+// klik gambar Kurikulum SD
+const thumbnail = document.getElementById("thumbnail-trigger");
+const modal = document.getElementById("modal-image");
+const closeButton = document.getElementById("modal-close");
+
+// Fungsi untuk menampilkan modal
+function openModal() {
+  modal.classList.remove("hidden");
+  modal.classList.add("flex");
+  document.body.style.overflow = "hidden"; // Mencegah scrolling di belakang modal
+}
+
+// Fungsi untuk menyembunyikan modal
+function closeModal() {
+  modal.classList.remove("flex");
+  modal.classList.add("hidden");
+  document.body.style.overflow = "auto"; // Mengaktifkan scrolling kembali
+}
+
+// Event Listeners
+thumbnail.addEventListener("click", openModal);
+closeButton.addEventListener("click", closeModal);
+
+// Menutup modal jika klik di luar gambar
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    closeModal();
+  }
 });

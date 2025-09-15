@@ -98,7 +98,7 @@
           Tentang Sekolah SD Alam <span class="text-primary">Selfa</span>
         </h2>
 
-        <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
           <div data-aos="fade-right">
             <img src="image/P1410680.JPG" alt="Gedung Sekolah Sayf El Falah" class="rounded-lg shadow-lg" />
           </div>
@@ -146,7 +146,7 @@
           <div class="w-20 h-1 bg-primary mx-auto mb-6" data-aos="fade-up" data-aos-delay="100"></div>
         </div>
 
-        <div class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 md:gap-8">
+        <div class="grid grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 md:gap-8">
           <div
             class="group relative cursor-pointer overflow-hidden px-4 pt-6 pb-6 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl rounded-lg card-observe z-20"
           >
@@ -472,6 +472,46 @@
         </div>
       </div>
     </section>
+
+    <div class="flex items-center justify-center my-12">
+      <hr class="w-16 h-1 bg-primary rounded-full" />
+      <i class="fas fa-star text-2xl text-primary mx-4"></i>
+      <hr class="w-16 h-1 bg-primary rounded-full" />
+    </div>
+
+    <!-- Kurikulum Section -->
+    <section id="kurikulum" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold text-secondary mb-3">Kurikulum Unggulan SD</h2>
+          <div class="w-24 h-1 bg-primary mx-auto"></div>
+        </div>
+
+        <div class="flex justify-center cursor-pointer" id="thumbnail-trigger">
+          <img
+            src="image/Kurikulum-sd.svg"
+            alt="Tampilan Kurikulum SD"
+            class="rounded-2xl shadow-2xl w-full max-w-lg h-auto transition-transform duration-300 hover:scale-105"
+          />
+        </div>
+      </div>
+    </section>
+
+    <div
+      id="modal-image"
+      class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-75 transition-opacity duration-300"
+    >
+      <div class="relative max-w-full max-h-full h-full w-full">
+        <button id="modal-close" class="absolute top-4 right-4 text-white text-3xl font-bold hover:text-gray-300 transition-colors z-50">
+          &times;
+        </button>
+        <img
+          src="image/Kurikulum-sd.svg"
+          alt="Tampilan Kurikulum SD Penuh"
+          class="w-full h-full object-contain rounded-none lg:rounded-2xl lg:shadow-2xl"
+        />
+      </div>
+    </div>
 
     <div class="flex items-center justify-center my-12">
       <hr class="w-16 h-1 bg-primary rounded-full" />
