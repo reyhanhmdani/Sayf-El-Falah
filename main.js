@@ -217,29 +217,33 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // klik gambar Kurikulum SD
-const thumbnail = document.getElementById("thumbnail-trigger");
+const thumbnailContainer = document.getElementById("thumbnail-trigger");
 const modal = document.getElementById("modal-image");
+const modalImage = modal.querySelector("img");
 const closeButton = document.getElementById("modal-close");
 
-// Fungsi untuk menampilkan modal
 function openModal() {
+  // Dapatkan URL gambar yang saat ini ditampilkan oleh browser
+  const currentSrc = thumbnailContainer.querySelector("img").currentSrc;
+
+  // Atur URL gambar modal sesuai dengan gambar yang sedang ditampilkan
+  modalImage.src = currentSrc;
+
   modal.classList.remove("hidden");
   modal.classList.add("flex");
-  document.body.style.overflow = "hidden"; // Mencegah scrolling di belakang modal
+  document.body.style.overflow = "hidden";
 }
 
-// Fungsi untuk menyembunyikan modal
 function closeModal() {
   modal.classList.remove("flex");
   modal.classList.add("hidden");
-  document.body.style.overflow = "auto"; // Mengaktifkan scrolling kembali
+  document.body.style.overflow = "auto";
+  modalImage.src = ""; // Kosongkan URL gambar saat ditutup
 }
 
-// Event Listeners
-thumbnail.addEventListener("click", openModal);
+thumbnailContainer.addEventListener("click", openModal);
 closeButton.addEventListener("click", closeModal);
 
-// Menutup modal jika klik di luar gambar
 modal.addEventListener("click", (e) => {
   if (e.target === modal) {
     closeModal();

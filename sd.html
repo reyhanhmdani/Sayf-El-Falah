@@ -482,20 +482,52 @@
     <!-- Kurikulum Section -->
     <section id="kurikulum" class="py-20 bg-gray-50">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h2 class="text-4xl font-bold text-secondary mb-3">Kurikulum Unggulan SD</h2>
-          <div class="w-24 h-1 bg-primary mx-auto"></div>
-        </div>
-
         <div class="flex justify-center cursor-pointer" id="thumbnail-trigger">
-          <img
-            src="image/Kurikulum-sd.svg"
-            alt="Tampilan Kurikulum SD"
-            class="rounded-2xl shadow-2xl w-full max-w-lg h-auto transition-transform duration-300 hover:scale-105"
-          />
+          <picture>
+            <source media="(min-width: 768px)" srcset="image/kurikulumsdlandscape.svg" />
+
+            <img
+              src="image/Kurikulum-sd.svg"
+              alt="Tampilan Kurikulum SD"
+              class="rounded-2xl shadow-2xl w-full max-w-6xl h-auto transition-transform duration-300 hover:scale-105"
+            />
+          </picture>
         </div>
       </div>
     </section>
+
+    <div
+      id="modal-image"
+      class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-75 transition-opacity duration-300"
+    >
+      <div class="relative max-w-full max-h-full h-full w-full">
+        <button id="modal-close" class="absolute top-4 right-4 text-white text-3xl font-bold hover:text-gray-300 transition-colors z-50">
+          &times;
+        </button>
+        <picture id="modal-picture">
+          <img src="" alt="Tampilan Kurikulum SD Penuh" class="w-full h-full object-contain rounded-none lg:rounded-2xl lg:shadow-2xl" />
+        </picture>
+      </div>
+    </div>
+
+    <div
+      id="modal-image"
+      class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-75 transition-opacity duration-300"
+    >
+      <div class="relative max-w-full max-h-full h-full w-full">
+        <button id="modal-close" class="absolute top-4 right-4 text-white text-3xl font-bold hover:text-gray-300 transition-colors z-50">
+          &times;
+        </button>
+        <picture>
+          <source media="(min-width: 1024px)" srcset="image/kurikulumsdlandscape.svg" />
+          <img
+            src="image/kurikulumsdlandscape.svg"
+            alt="Tampilan Kurikulum SD Penuh"
+            class="w-full h-full object-contain rounded-none lg:rounded-2xl lg:shadow-2xl"
+          />
+        </picture>
+      </div>
+    </div>
 
     <div
       id="modal-image"
@@ -550,59 +582,79 @@
     </section>
 
     <!-- PDDB Section -->
-    <section class="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
-      <div class="max-w-3xl mx-auto text-center">
-        <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-2">Penerimaan Peserta Didik Baru</h2>
-        <p class="text-base text-gray-600">Sekolah Alam Selfa membuka pendaftaran untuk siswa baru pada jenjang Sekolah Dasar (SD).</p>
-        <div class="mt-8">
-          <h3 class="text-2xl font-bold text-primary mb-2">Persyaratan</h3>
-          <p class="text-gray-700 leading-relaxed">
-            Sekolah Alam Selfa membuka pendaftaran untuk siswa baru pada jenjang Sekolah Dasar (SD) dengan persyaratan:
+    <section class="relative bg-gradient-to-br from-gray-50 via-white to-gray-100 py-16 px-6 lg:px-12">
+      <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+        <!-- Gambar Sekolah -->
+        <div class="relative">
+          <img src="/image/gedung Sd.jpg" alt="Gedung Sekolah Alam Selfa" class="rounded-2xl shadow-2xl w-full object-cover" />
+          <div class="absolute inset-0rounded-2xl"></div>
+        </div>
+
+        <!-- Konten -->
+        <div>
+          <h2 class="text-4xl md:text-5xl font-extrabold text-secondary mb-4">Penerimaan Peserta Didik Baru</h2>
+          <p class="text-lg text-gray-600 mb-6">
+            Bergabunglah bersama <span class="text-primary font-semibold">Sekolah Alam Selfa</span>, sekolah berbasis alam yang menumbuhkan
+            <strong>karakter Islami</strong>, kreativitas, dan kepemimpinan sejak dini.
           </p>
 
-          <div class="mt-6 text-left">
-            <h4 class="font-bold text-secondary">Usia</h4>
-            <ul class="list-disc list-inside ml-4 text-gray-700">
-              <li>Usia Siswa SD Kelas 1 Minimal 6 Tahun Per 1 Juli 2024</li>
-              <li>Usia Siswa SD Kelas 2 Minimal 7 Tahun Per 1 Juli 2024</li>
-            </ul>
+          <!-- Persyaratan -->
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-2xl font-bold text-primary mb-2">Persyaratan</h3>
+              <p class="text-gray-700">Siswa baru Sekolah Dasar (SD) dengan ketentuan usia:</p>
+              <ul class="list-disc list-inside ml-4 text-gray-700 mt-2">
+                <li>Usia kelas 1 minimal 6 tahun (per 1 Juli 2024)</li>
+                <li>Usia kelas 2 minimal 7 tahun (per 1 Juli 2024)</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 class="font-bold text-secondary">Rangkaian Proses Penerimaan</h4>
+              <p class="text-gray-700 mt-2 leading-relaxed">
+                Mengikuti Open House, pendaftaran online, observasi calon siswa, wawancara orang tua, pelunasan biaya sesuai jadwal, serta
+                mengikuti 2 sesi kelas orang tua.
+              </p>
+            </div>
           </div>
 
-          <div class="mt-6 text-left">
-            <h4 class="font-bold text-secondary">Mengikuti Seluruh Rangkaian Proses Penerimaan Siswa Baru</h4>
-            <p class="text-gray-700 leading-relaxed mt-2">
-              Rangkaian proses penerimaan siswa baru yaitu mengikuti Open House, mengisi formulir pendaftaran secara online, calon siswa
-              melewati proses observasi, orangtua mengikuti wawancara, melunasi seluruh pembiayaan sesuai dengan jadwal dan ketentuan, serta
-              orang tua mengikuti 2 sesi kelas orang tua yang diselenggarakan oleh sekolah.
-            </p>
-          </div>
-
-          <div class="mt-8 text-left">
-            <h3 class="text-2xl font-bold text-primary mb-2">Biaya Pendaftaran</h3>
-            <div class="bg-gray-50 p-4 rounded-lg shadow-inner">
-              <ul class="text-gray-700">
-                <li class="flex justify-between border-b py-2">
+          <!-- Biaya -->
+          <div class="mt-10">
+            <h3 class="text-2xl font-bold text-primary mb-3">Biaya Pendaftaran</h3>
+            <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+              <ul class="text-gray-700 divide-y">
+                <li class="flex justify-between py-3">
                   <span class="font-semibold">Formulir Pendaftaran</span>
                   <span>Rp 200.000,-</span>
                 </li>
-                <li class="flex justify-between border-b py-2">
+                <li class="flex justify-between py-3">
                   <span class="font-semibold">Dana Fasilitas</span>
                   <span>Rp 6.500.000,-</span>
                 </li>
-                <li class="flex justify-between border-b py-2">
+                <li class="flex justify-between py-3">
                   <span class="font-semibold">Dana Kegiatan</span>
                   <span>Rp 2.500.000,-</span>
                 </li>
-                <li class="flex justify-between border-b py-2">
+                <li class="flex justify-between py-3">
                   <span class="font-semibold">Wakaf</span>
                   <span>Sesuai Kesepakatan</span>
                 </li>
-                <li class="flex justify-between pt-2 text-lg font-bold">
+                <li class="flex justify-between py-3 text-lg font-bold text-secondary">
                   <span>Total</span>
                   <span>Rp 9.200.000,-</span>
                 </li>
               </ul>
             </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="mt-8">
+            <a
+              href="/daftar.html"
+              class="inline-block bg-primary text-white font-semibold px-8 py-3 rounded-full shadow-lg hover:scale-105 hover:shadow-xl transition transform"
+            >
+              Daftar Sekarang →
+            </a>
           </div>
         </div>
       </div>
@@ -740,25 +792,19 @@
                   <h4 class="font-bold text-secondary mb-4">Ikuti Kami</h4>
                   <div class="flex space-x-4">
                     <a
-                      href="#"
-                      class="w-10 h-10 rounded-full bg-secondary hover:bg-primary text-white flex items-center justify-center transition duration-300"
-                    >
-                      <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a
-                      href="#"
+                      href="https://www.instagram.com/salamselfa/"
                       class="w-10 h-10 rounded-full bg-secondary hover:bg-primary text-white flex items-center justify-center transition duration-300"
                     >
                       <i class="fab fa-instagram"></i>
                     </a>
                     <a
-                      href="#"
+                      href="https://www.youtube.com/@SekolahAlamSelfa"
                       class="w-10 h-10 rounded-full bg-secondary hover:bg-primary text-white flex items-center justify-center transition duration-300"
                     >
                       <i class="fab fa-youtube"></i>
                     </a>
                     <a
-                      href="#"
+                      href="https://wa.link/sn6e7e"
                       class="w-10 h-10 rounded-full bg-secondary hover:bg-primary text-white flex items-center justify-center transition duration-300"
                     >
                       <i class="fab fa-whatsapp"></i>
@@ -793,10 +839,13 @@
             <h3 class="text-xl font-bold font-sans mb-4">Sayf El Falah</h3>
             <p class="mb-4">Sekolah unggulan dengan pendidikan terpadu yang mengintegrasikan ilmu pengetahuan dan nilai-nilai keislaman.</p>
             <div class="flex space-x-4">
-              <a href="#" class="text-white hover:text-primary transition"><i class="fab fa-facebook-f"></i></a>
-              <a href="#" class="text-white hover:text-primary transition"><i class="fab fa-instagram"></i></a>
-              <a href="#" class="text-white hover:text-primary transition"><i class="fab fa-twitter"></i></a>
-              <a href="#" class="text-white hover:text-primary transition"><i class="fab fa-youtube"></i></a>
+              <a href="https://www.instagram.com/salamselfa/" class="text-white hover:text-primary transition"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="https://wa.link/sn6e7e" class="text-white hover:text-primary transition"><i class="fab fa-whatsapp"></i></a>
+              <a href="https://www.youtube.com/@SekolahAlamSelfa" class="text-white hover:text-primary transition"
+                ><i class="fab fa-youtube"></i
+              ></a>
             </div>
           </div>
 
@@ -828,11 +877,11 @@
               </li>
               <li class="flex items-center">
                 <i class="fas fa-phone mr-3"></i>
-                <span>(021) 7654321</span>
+                <span>0851-3663-7227</span>
               </li>
               <li class="flex items-center">
                 <i class="fas fa-envelope mr-3"></i>
-                <span>info@sayfelfalah.sch.id</span>
+                <span>salamselfa@gmail.com</span>
               </li>
             </ul>
           </div>
