@@ -92,32 +92,26 @@ function autoHoverCards(sectionId, mode = "center") {
 
   if (window.innerWidth < 1000 && cards.length > 0) {
     if (mode === "center") {
-      // Mode titik tengah (home)
-      const setActiveCard = () => {
+      const setActiveCards = () => {
         const middle = window.innerHeight / 2;
-
-        let closestCard = null;
-        let closestDistance = Infinity;
+        const threshold = 150; // toleransi area tengah
 
         cards.forEach((card) => {
           const rect = card.getBoundingClientRect();
           const cardMiddle = rect.top + rect.height / 2;
           const distance = Math.abs(cardMiddle - middle);
 
-          if (distance < closestDistance) {
-            closestDistance = distance;
-            closestCard = card;
+          if (distance <= threshold) {
+            card.classList.add("hover");
+          } else {
+            card.classList.remove("hover");
           }
         });
-
-        cards.forEach((card) => card.classList.remove("hover"));
-        if (closestCard) closestCard.classList.add("hover");
       };
 
-      setActiveCard();
-      window.addEventListener("scroll", setActiveCard);
+      setActiveCards(); // ✅ pakai yang benar
+      window.addEventListener("scroll", setActiveCards);
     } else if (mode === "observer") {
-      // Mode intersection observer (kbtk, sd, ponpes)
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
@@ -147,10 +141,10 @@ autoHoverCards("#program", "center");
 autoHoverCards("#program-kbtk", "center");
 
 // SD
-autoHoverCards("#program-sd", "observer");
+autoHoverCards("#program-sd", "center");
 
 // Ponpes
-autoHoverCards("#program-ponpes", "observer");
+autoHoverCards("#program-ponpes", "center");
 
 // GALLERY
 document.addEventListener("DOMContentLoaded", () => {
