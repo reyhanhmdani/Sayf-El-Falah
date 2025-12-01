@@ -3,6 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+      fbq("init", "844377491682578");
+      fbq("track", "PageView");
+    </script>
+    <noscript><img height="1" width="1" style="display: none" src="https://www.facebook.com/tr?id=844377491682578&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
     <title>SD Alam Sayf El Falah</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -19,6 +42,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="./src/output.css" />
   </head>
+
   <body class="font-body">
     <!-- Navbar -->
     <nav class="navbar fixed w-full z-50 py-4">
@@ -31,10 +55,7 @@
           <a href="index" class="nav-link text-white hover:text-primary transition">Home</a>
           <a href="#about" class="nav-link text-white hover:text-primary transition">About Us</a>
           <div class="relative group">
-            <button
-              class="nav-link text-white hover:text-primary transition focus:outline-none flex items-center"
-              id="dropdown-btn-desktop"
-            >
+            <button class="nav-link text-white hover:text-primary transition focus:outline-none flex items-center" id="dropdown-btn-desktop">
               Program Selfa <i class="fas fa-chevron-down ml-2 text-xs transition-transform duration-300"></i>
             </button>
             <div
@@ -62,10 +83,7 @@
         <a href="index" class="block py-2 text-secondary hover:text-primary">Home</a>
         <a href="#about" class="block py-2 text-secondary hover:text-primary">About Us</a>
 
-        <button
-          class="block w-full text-left py-2 text-secondary hover:text-primary transition focus:outline-none"
-          id="dropdown-btn-mobile"
-        >
+        <button class="block w-full text-left py-2 text-secondary hover:text-primary transition focus:outline-none" id="dropdown-btn-mobile">
           Program Selfa <i class="fas fa-chevron-down ml-2 text-xs transition-transform duration-300"></i>
         </button>
         <div id="dropdown-menu-mobile" class="hidden pl-4 py-2 space-y-2">
@@ -85,9 +103,7 @@
       <div class="relative z-20 container mx-auto px-6 text-center text-white" data-aos="fade-up">
         <h1 class="text-4xl md:text-6xl font-bold font-heading mb-4">Selamat Datang di SD Alam</h1>
         <h1 class="text-5xl md:text-8xl font-bold font-sans mb-4 text-primary">Sayf El Falah</h1>
-        <p class="text-xl md:text-2xl mb-8">
-          Membentuk generasi cerdas, kreatif, dan berakhlak mulia melalui pendidikan usia dini yang menyenangkan.
-        </p>
+        <p class="text-xl md:text-2xl mb-8">Membentuk generasi cerdas, kreatif, dan berakhlak mulia melalui pendidikan usia dini yang menyenangkan.</p>
       </div>
     </header>
 
@@ -106,8 +122,8 @@
           <div data-aos="fade-left">
             <h3 class="text-2xl font-bold font-heading text-secondary mb-4">Visi</h3>
             <p class="text-gray-700 mb-6">
-              Menjadi Sekolah yang membantu setiap anak tumbuh sesuai fitrahnya, hingga menjadi manusia utuh yang mampu menjadi pemimpin dan
-              rahmat bagi dunia sesuai keinginan Allah Ta'ala dan Rasulullah shollallahu alaihi wa sallam
+              Menjadi Sekolah yang membantu setiap anak tumbuh sesuai fitrahnya, hingga menjadi manusia utuh yang mampu menjadi pemimpin dan rahmat bagi dunia
+              sesuai keinginan Allah Ta'ala dan Rasulullah shollallahu alaihi wa sallam
             </p>
 
             <h3 class="text-2xl font-bold font-heading text-secondary mb-4">Misi</h3>
@@ -115,15 +131,14 @@
               <li class="flex items-start">
                 <i class="fas fa-star text-accent mt-1 mr-3"></i>
                 <span
-                  >Menyediakan metode pembelajaran yang mengembangkan dan menyentuh seluruh aspek dasar manusia meliputi akal, rasa, fisik,
-                  mental dan sosial
+                  >Menyediakan metode pembelajaran yang mengembangkan dan menyentuh seluruh aspek dasar manusia meliputi akal, rasa, fisik, mental dan sosial
                 </span>
               </li>
               <li class="flex items-start">
                 <i class="fas fa-star text-accent mt-1 mr-3"></i>
                 <span
-                  >Menjadi tempat tumbuh terbaik bagi anak di masa depan keemasannya dengan memberikan beragam pengalaman kehidupan yang di
-                  butuhkan di masa depan</span
+                  >Menjadi tempat tumbuh terbaik bagi anak di masa depan keemasannya dengan memberikan beragam pengalaman kehidupan yang di butuhkan di masa
+                  depan</span
                 >
               </li>
             </ul>
@@ -154,16 +169,10 @@
               class="absolute top-6 left-1/2 -translate-x-1/2 z-0 h-16 w-16 rounded-full bg-gradient-to-r from-primary to-biru transition-all duration-1000 group-hover:scale-[10] group-hover:opacity-100 group-[.hover]:scale-[10] group-[.hover]:opacity-100"
             ></span>
             <div class="relative z-10 w-full text-center">
-              <span
-                class="grid h-16 w-16 mx-auto place-items-center rounded-full border border-primary bg-white transition-all duration-300"
-              >
-                <i
-                  class="fa-solid fa-chalkboard-user text-2xl text-primary transition-transform group-hover:scale-110 group-[.hover]:scale-110"
-                ></i>
+              <span class="grid h-16 w-16 mx-auto place-items-center rounded-full border border-primary bg-white transition-all duration-300">
+                <i class="fa-solid fa-chalkboard-user text-2xl text-primary transition-transform group-hover:scale-110 group-[.hover]:scale-110"></i>
               </span>
-              <h3
-                class="mt-2 text-xs md:text-sm font-bold text-secondary transition-colors group-hover:text-white group-[.hover]:text-white"
-              >
+              <h3 class="mt-2 text-xs md:text-sm font-bold text-secondary transition-colors group-hover:text-white group-[.hover]:text-white">
                 Meet The Expert
               </h3>
               <p class="mt-2 text-xxs text-gray-600 transition-colors group-hover:text-white/80 group-[.hover]:text-white/80">
@@ -179,18 +188,10 @@
               class="absolute top-6 left-1/2 -translate-x-1/2 z-0 h-16 w-16 rounded-full bg-gradient-to-r from-primary to-biru transition-all duration-1000 group-hover:scale-[10] group-hover:opacity-100 group-[.hover]:scale-[10] group-[.hover]:opacity-100"
             ></span>
             <div class="relative z-10 w-full text-center">
-              <span
-                class="grid h-16 w-16 mx-auto place-items-center rounded-full border border-primary bg-white transition-all duration-300"
-              >
-                <i
-                  class="fa-solid fa-people-roof text-2xl text-primary transition-transform group-hover:scale-110 group-[.hover]:scale-110"
-                ></i>
+              <span class="grid h-16 w-16 mx-auto place-items-center rounded-full border border-primary bg-white transition-all duration-300">
+                <i class="fa-solid fa-people-roof text-2xl text-primary transition-transform group-hover:scale-110 group-[.hover]:scale-110"></i>
               </span>
-              <h3
-                class="mt-2 text-xs md:text-sm font-bold text-secondary transition-colors group-hover:text-white group-[.hover]:text-white"
-              >
-                Outbond
-              </h3>
+              <h3 class="mt-2 text-xs md:text-sm font-bold text-secondary transition-colors group-hover:text-white group-[.hover]:text-white">Outbond</h3>
               <p class="mt-2 text-xxs text-gray-600 transition-colors group-hover:text-white/80 group-[.hover]:text-white/80">
                 Melatih kemandirian, kekompakan tim, dan kecintaan pada alam.
               </p>
@@ -204,18 +205,10 @@
               class="absolute top-6 left-1/2 -translate-x-1/2 z-0 h-16 w-16 rounded-full bg-gradient-to-r from-primary to-biru transition-all duration-1000 group-hover:scale-[10] group-hover:opacity-100 group-[.hover]:scale-[10] group-[.hover]:opacity-100"
             ></span>
             <div class="relative z-10 w-full text-center">
-              <span
-                class="grid h-16 w-16 mx-auto place-items-center rounded-full border border-primary bg-white transition-all duration-300"
-              >
-                <i
-                  class="fa-solid fa-seedling text-2xl text-primary transition-transform group-hover:scale-110 group-[.hover]:scale-110"
-                ></i>
+              <span class="grid h-16 w-16 mx-auto place-items-center rounded-full border border-primary bg-white transition-all duration-300">
+                <i class="fa-solid fa-seedling text-2xl text-primary transition-transform group-hover:scale-110 group-[.hover]:scale-110"></i>
               </span>
-              <h3
-                class="mt-2 text-xs md:text-sm font-bold text-secondary transition-colors group-hover:text-white group-[.hover]:text-white"
-              >
-                Happy Farming
-              </h3>
+              <h3 class="mt-2 text-xs md:text-sm font-bold text-secondary transition-colors group-hover:text-white group-[.hover]:text-white">Happy Farming</h3>
               <p class="mt-2 text-xxs text-gray-600 transition-colors group-hover:text-white/80 group-[.hover]:text-white/80">
                 Belajar bercocok tanam dan memahami proses pertumbuhan tumbuhan.
               </p>
@@ -229,18 +222,10 @@
               class="absolute top-6 left-1/2 -translate-x-1/2 z-0 h-16 w-16 rounded-full bg-gradient-to-r from-primary to-biru transition-all duration-1000 group-hover:scale-[10] group-hover:opacity-100 group-[.hover]:scale-[10] group-[.hover]:opacity-100"
             ></span>
             <div class="relative z-10 w-full text-center">
-              <span
-                class="grid h-16 w-16 mx-auto place-items-center rounded-full border border-primary bg-white transition-all duration-300"
-              >
-                <i
-                  class="fa-solid fa-campground text-2xl text-primary transition-transform group-hover:scale-110 group-[.hover]:scale-110"
-                ></i>
+              <span class="grid h-16 w-16 mx-auto place-items-center rounded-full border border-primary bg-white transition-all duration-300">
+                <i class="fa-solid fa-campground text-2xl text-primary transition-transform group-hover:scale-110 group-[.hover]:scale-110"></i>
               </span>
-              <h3
-                class="mt-2 text-xs md:text-sm font-bold text-secondary transition-colors group-hover:text-white group-[.hover]:text-white"
-              >
-                Camping
-              </h3>
+              <h3 class="mt-2 text-xs md:text-sm font-bold text-secondary transition-colors group-hover:text-white group-[.hover]:text-white">Camping</h3>
               <p class="mt-2 text-xxs text-gray-600 transition-colors group-hover:text-white/80 group-[.hover]:text-white/80">
                 Membangun karakter tangguh dan melatih keterampilan bertahan hidup.
               </p>
@@ -254,14 +239,10 @@
               class="absolute top-6 left-1/2 -translate-x-1/2 z-0 h-16 w-16 rounded-full bg-gradient-to-r from-primary to-biru transition-all duration-1000 group-hover:scale-[10] group-hover:opacity-100 group-[.hover]:scale-[10] group-[.hover]:opacity-100"
             ></span>
             <div class="relative z-10 w-full text-center">
-              <span
-                class="grid h-16 w-16 mx-auto place-items-center rounded-full border border-primary bg-white transition-all duration-300"
-              >
+              <span class="grid h-16 w-16 mx-auto place-items-center rounded-full border border-primary bg-white transition-all duration-300">
                 <i class="fa-solid fa-dove text-2xl text-primary transition-transform group-hover:scale-110 group-[.hover]:scale-110"></i>
               </span>
-              <h3
-                class="mt-2 text-xs md:text-sm font-bold text-secondary transition-colors group-hover:text-white group-[.hover]:text-white"
-              >
+              <h3 class="mt-2 text-xs md:text-sm font-bold text-secondary transition-colors group-hover:text-white group-[.hover]:text-white">
                 Animal Breeding
               </h3>
               <p class="mt-2 text-xxs text-gray-600 transition-colors group-hover:text-white/80 group-[.hover]:text-white/80">
@@ -277,14 +258,10 @@
               class="absolute top-6 left-1/2 -translate-x-1/2 z-0 h-16 w-16 rounded-full bg-gradient-to-r from-primary to-biru transition-all duration-1000 group-hover:scale-[10] group-hover:opacity-100 group-[.hover]:scale-[10] group-[.hover]:opacity-100"
             ></span>
             <div class="relative z-10 w-full text-center">
-              <span
-                class="grid h-16 w-16 mx-auto place-items-center rounded-full border border-primary bg-white transition-all duration-300"
-              >
+              <span class="grid h-16 w-16 mx-auto place-items-center rounded-full border border-primary bg-white transition-all duration-300">
                 <i class="fa-solid fa-coins text-2xl text-primary transition-transform group-hover:scale-110 group-[.hover]:scale-110"></i>
               </span>
-              <h3
-                class="mt-2 text-xs md:text-sm font-bold text-secondary transition-colors group-hover:text-white group-[.hover]:text-white"
-              >
+              <h3 class="mt-2 text-xs md:text-sm font-bold text-secondary transition-colors group-hover:text-white group-[.hover]:text-white">
                 Financial Literacy
               </h3>
               <p class="mt-2 text-xxs text-gray-600 transition-colors group-hover:text-white/80 group-[.hover]:text-white/80">
@@ -300,16 +277,10 @@
               class="absolute top-6 left-1/2 -translate-x-1/2 z-0 h-16 w-16 rounded-full bg-gradient-to-r from-primary to-biru transition-all duration-1000 group-hover:scale-[10] group-hover:opacity-100 group-[.hover]:scale-[10] group-[.hover]:opacity-100"
             ></span>
             <div class="relative z-10 w-full text-center">
-              <span
-                class="grid h-16 w-16 mx-auto place-items-center rounded-full border border-primary bg-white transition-all duration-300"
-              >
-                <i
-                  class="fa-solid fa-person-hiking text-2xl text-primary transition-transform group-hover:scale-110 group-[.hover]:scale-110"
-                ></i>
+              <span class="grid h-16 w-16 mx-auto place-items-center rounded-full border border-primary bg-white transition-all duration-300">
+                <i class="fa-solid fa-person-hiking text-2xl text-primary transition-transform group-hover:scale-110 group-[.hover]:scale-110"></i>
               </span>
-              <h3
-                class="mt-2 text-xxs md:text-sm font-bold text-secondary transition-colors group-hover:text-white group-[.hover]:text-white"
-              >
+              <h3 class="mt-2 text-xxs md:text-sm font-bold text-secondary transition-colors group-hover:text-white group-[.hover]:text-white">
                 SASS (Sekolah Alam Student Scout)
               </h3>
               <p class="mt-2 text-xxs text-gray-600 transition-colors group-hover:text-white/80 group-[.hover]:text-white/80">
@@ -325,16 +296,10 @@
               class="absolute top-6 left-1/2 -translate-x-1/2 z-0 h-16 w-16 rounded-full bg-gradient-to-r from-primary to-biru transition-all duration-1000 group-hover:scale-[10] group-hover:opacity-100 group-[.hover]:scale-[10] group-[.hover]:opacity-100"
             ></span>
             <div class="relative z-10 w-full text-center">
-              <span
-                class="grid h-16 w-16 mx-auto place-items-center rounded-full border border-primary bg-white transition-all duration-300"
-              >
-                <i
-                  class="fa-solid fa-computer text-2xl text-primary transition-transform group-hover:scale-110 group-[.hover]:scale-110"
-                ></i>
+              <span class="grid h-16 w-16 mx-auto place-items-center rounded-full border border-primary bg-white transition-all duration-300">
+                <i class="fa-solid fa-computer text-2xl text-primary transition-transform group-hover:scale-110 group-[.hover]:scale-110"></i>
               </span>
-              <h3
-                class="mt-2 text-xs md:text-sm font-bold text-secondary transition-colors group-hover:text-white group-[.hover]:text-white"
-              >
+              <h3 class="mt-2 text-xs md:text-sm font-bold text-secondary transition-colors group-hover:text-white group-[.hover]:text-white">
                 Digital, Internet & I.T
               </h3>
               <p class="mt-2 text-xxs text-gray-600 transition-colors group-hover:text-white/80 group-[.hover]:text-white/80">
@@ -350,18 +315,10 @@
               class="absolute top-6 left-1/2 -translate-x-1/2 z-0 h-16 w-16 rounded-full bg-gradient-to-r from-primary to-biru transition-all duration-1000 group-hover:scale-[10] group-hover:opacity-100 group-[.hover]:scale-[10] group-[.hover]:opacity-100"
             ></span>
             <div class="relative z-10 w-full text-center">
-              <span
-                class="grid h-16 w-16 mx-auto place-items-center rounded-full border border-primary bg-white transition-all duration-300"
-              >
-                <i
-                  class="fa-solid fa-user-tie text-2xl text-primary transition-transform group-hover:scale-110 group-[.hover]:scale-110"
-                ></i>
+              <span class="grid h-16 w-16 mx-auto place-items-center rounded-full border border-primary bg-white transition-all duration-300">
+                <i class="fa-solid fa-user-tie text-2xl text-primary transition-transform group-hover:scale-110 group-[.hover]:scale-110"></i>
               </span>
-              <h3
-                class="mt-2 text-xs md:text-sm font-bold text-secondary transition-colors group-hover:text-white group-[.hover]:text-white"
-              >
-                Leadership
-              </h3>
+              <h3 class="mt-2 text-xs md:text-sm font-bold text-secondary transition-colors group-hover:text-white group-[.hover]:text-white">Leadership</h3>
               <p class="mt-2 text-xxs text-gray-600 transition-colors group-hover:text-white/80 group-[.hover]:text-white/80">
                 Melatih siswa untuk mengembangkan potensi kepemimpinan diri.
               </p>
@@ -375,16 +332,10 @@
               class="absolute top-6 left-1/2 -translate-x-1/2 z-0 h-16 w-16 rounded-full bg-gradient-to-r from-primary to-biru transition-all duration-1000 group-hover:scale-[10] group-hover:opacity-100 group-[.hover]:scale-[10] group-[.hover]:opacity-100"
             ></span>
             <div class="relative z-10 w-full text-center">
-              <span
-                class="grid h-16 w-16 mx-auto place-items-center rounded-full border border-primary bg-white transition-all duration-300"
-              >
-                <i
-                  class="fa-solid fa-handshake text-2xl text-primary transition-transform group-hover:scale-110 group-[.hover]:scale-110"
-                ></i>
+              <span class="grid h-16 w-16 mx-auto place-items-center rounded-full border border-primary bg-white transition-all duration-300">
+                <i class="fa-solid fa-handshake text-2xl text-primary transition-transform group-hover:scale-110 group-[.hover]:scale-110"></i>
               </span>
-              <h3
-                class="mt-2 text-xs md:text-sm font-bold text-secondary transition-colors group-hover:text-white group-[.hover]:text-white"
-              >
+              <h3 class="mt-2 text-xs md:text-sm font-bold text-secondary transition-colors group-hover:text-white group-[.hover]:text-white">
                 Talk To Investor
               </h3>
               <p class="mt-2 text-xxs text-gray-600 transition-colors group-hover:text-white/80 group-[.hover]:text-white/80">
@@ -400,16 +351,10 @@
               class="absolute top-6 left-1/2 -translate-x-1/2 z-0 h-16 w-16 rounded-full bg-gradient-to-r from-primary to-biru transition-all duration-1000 group-hover:scale-[10] group-hover:opacity-100 group-[.hover]:scale-[10] group-[.hover]:opacity-100"
             ></span>
             <div class="relative z-10 w-full text-center">
-              <span
-                class="grid h-16 w-16 mx-auto place-items-center rounded-full border border-primary bg-white transition-all duration-300"
-              >
-                <i
-                  class="fa-solid fa-book-quran text-2xl text-primary transition-transform group-hover:scale-110 group-[.hover]:scale-110"
-                ></i>
+              <span class="grid h-16 w-16 mx-auto place-items-center rounded-full border border-primary bg-white transition-all duration-300">
+                <i class="fa-solid fa-book-quran text-2xl text-primary transition-transform group-hover:scale-110 group-[.hover]:scale-110"></i>
               </span>
-              <h3
-                class="mt-2 text-xs md:text-sm font-bold text-secondary transition-colors group-hover:text-white group-[.hover]:text-white"
-              >
+              <h3 class="mt-2 text-xs md:text-sm font-bold text-secondary transition-colors group-hover:text-white group-[.hover]:text-white">
                 Story Telling Islamic History
               </h3>
               <p class="mt-2 text-xxs text-gray-600 transition-colors group-hover:text-white/80 group-[.hover]:text-white/80">
@@ -425,18 +370,10 @@
               class="absolute top-6 left-1/2 -translate-x-1/2 z-0 h-16 w-16 rounded-full bg-gradient-to-r from-primary to-biru transition-all duration-1000 group-hover:scale-[10] group-hover:opacity-100 group-[.hover]:scale-[10] group-[.hover]:opacity-100"
             ></span>
             <div class="relative z-10 w-full text-center">
-              <span
-                class="grid h-16 w-16 mx-auto place-items-center rounded-full border border-primary bg-white transition-all duration-300"
-              >
-                <i
-                  class="fa-solid fa-face-smile-beam text-2xl text-primary transition-transform group-hover:scale-110 group-[.hover]:scale-110"
-                ></i>
+              <span class="grid h-16 w-16 mx-auto place-items-center rounded-full border border-primary bg-white transition-all duration-300">
+                <i class="fa-solid fa-face-smile-beam text-2xl text-primary transition-transform group-hover:scale-110 group-[.hover]:scale-110"></i>
               </span>
-              <h3
-                class="mt-2 text-xs md:text-sm font-bold text-secondary transition-colors group-hover:text-white group-[.hover]:text-white"
-              >
-                Fun Learning
-              </h3>
+              <h3 class="mt-2 text-xs md:text-sm font-bold text-secondary transition-colors group-hover:text-white group-[.hover]:text-white">Fun Learning</h3>
               <p class="mt-2 text-xxs text-gray-600 transition-colors group-hover:text-white/80 group-[.hover]:text-white/80">
                 Menjadikan proses belajar menyenangkan dan interaktif bagi siswa.
               </p>
@@ -450,16 +387,10 @@
               class="absolute top-6 left-1/2 -translate-x-1/2 z-0 h-16 w-16 rounded-full bg-gradient-to-r from-primary to-biru transition-all duration-1000 group-hover:scale-[10] group-hover:opacity-100 group-[.hover]:scale-[10] group-[.hover]:opacity-100"
             ></span>
             <div class="relative z-10 w-full text-center">
-              <span
-                class="grid h-16 w-16 mx-auto place-items-center rounded-full border border-primary bg-white transition-all duration-300"
-              >
-                <i
-                  class="fa-solid fa-users-gear text-2xl text-primary transition-transform group-hover:scale-110 group-[.hover]:scale-110"
-                ></i>
+              <span class="grid h-16 w-16 mx-auto place-items-center rounded-full border border-primary bg-white transition-all duration-300">
+                <i class="fa-solid fa-users-gear text-2xl text-primary transition-transform group-hover:scale-110 group-[.hover]:scale-110"></i>
               </span>
-              <h3
-                class="mt-2 text-xs md:text-sm font-bold text-secondary transition-colors group-hover:text-white group-[.hover]:text-white"
-              >
+              <h3 class="mt-2 text-xs md:text-sm font-bold text-secondary transition-colors group-hover:text-white group-[.hover]:text-white">
                 Parents Mastermind
               </h3>
               <p class="mt-2 text-xxs text-gray-600 transition-colors group-hover:text-white/80 group-[.hover]:text-white/80">
@@ -475,16 +406,10 @@
               class="absolute top-6 left-1/2 -translate-x-1/2 z-0 h-16 w-16 rounded-full bg-gradient-to-r from-primary to-biru transition-all duration-1000 group-hover:scale-[10] group-hover:opacity-100 group-[.hover]:scale-[10] group-[.hover]:opacity-100"
             ></span>
             <div class="relative z-10 w-full text-center">
-              <span
-                class="grid h-16 w-16 mx-auto place-items-center rounded-full border border-primary bg-white transition-all duration-300"
-              >
+              <span class="grid h-16 w-16 mx-auto place-items-center rounded-full border border-primary bg-white transition-all duration-300">
                 <i class="fa-solid fa-bed text-2xl text-primary transition-transform group-hover:scale-110 group-[.hover]:scale-110"></i>
               </span>
-              <h3
-                class="mt-2 text-xs md:text-sm font-bold text-secondary transition-colors group-hover:text-white group-[.hover]:text-white"
-              >
-                Qailullah
-              </h3>
+              <h3 class="mt-2 text-xs md:text-sm font-bold text-secondary transition-colors group-hover:text-white group-[.hover]:text-white">Qailullah</h3>
               <p class="mt-2 text-xxs text-gray-600 transition-colors group-hover:text-white/80 group-[.hover]:text-white/80">
                 Menerapkan tidur siang yang singkat sesuai sunnah untuk mengembalikan energi.
               </p>
@@ -498,14 +423,10 @@
               class="absolute top-6 left-1/2 -translate-x-1/2 z-0 h-16 w-16 rounded-full bg-gradient-to-r from-primary to-biru transition-all duration-1000 group-hover:scale-[10] group-hover:opacity-100 group-[.hover]:scale-[10] group-[.hover]:opacity-100"
             ></span>
             <div class="relative z-10 w-full text-center">
-              <span
-                class="grid h-16 w-16 mx-auto place-items-center rounded-full border border-primary bg-white transition-all duration-300"
-              >
+              <span class="grid h-16 w-16 mx-auto place-items-center rounded-full border border-primary bg-white transition-all duration-300">
                 <i class="fa-solid fa-quran text-2xl text-primary transition-transform group-hover:scale-110 group-[.hover]:scale-110"></i>
               </span>
-              <h3
-                class="mt-2 text-xs md:text-sm font-bold text-secondary transition-colors group-hover:text-white group-[.hover]:text-white"
-              >
+              <h3 class="mt-2 text-xs md:text-sm font-bold text-secondary transition-colors group-hover:text-white group-[.hover]:text-white">
                 Quranic Based Curriculum
               </h3>
               <p class="mt-2 text-xxs text-gray-600 transition-colors group-hover:text-white/80 group-[.hover]:text-white/80">
@@ -540,28 +461,18 @@
       </div>
     </section>
 
-    <div
-      id="modal-image"
-      class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-75 transition-opacity duration-300"
-    >
+    <div id="modal-image" class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-75 transition-opacity duration-300">
       <div class="relative max-w-full max-h-full h-full w-full">
-        <button id="modal-close" class="absolute top-4 right-4 text-white text-3xl font-bold hover:text-gray-300 transition-colors z-50">
-          &times;
-        </button>
+        <button id="modal-close" class="absolute top-4 right-4 text-white text-3xl font-bold hover:text-gray-300 transition-colors z-50">&times;</button>
         <picture id="modal-picture">
           <img src="" alt="Tampilan Kurikulum SD Penuh" class="w-full h-full object-contain rounded-none lg:rounded-2xl lg:shadow-2xl" />
         </picture>
       </div>
     </div>
 
-    <div
-      id="modal-image"
-      class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-75 transition-opacity duration-300"
-    >
+    <div id="modal-image" class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-75 transition-opacity duration-300">
       <div class="relative max-w-full max-h-full h-full w-full">
-        <button id="modal-close" class="absolute top-4 right-4 text-white text-3xl font-bold hover:text-gray-300 transition-colors z-50">
-          &times;
-        </button>
+        <button id="modal-close" class="absolute top-4 right-4 text-white text-3xl font-bold hover:text-gray-300 transition-colors z-50">&times;</button>
         <picture>
           <source media="(min-width: 1024px)" srcset="image/kurikulumsdlandscape.svg" />
           <img
@@ -573,19 +484,10 @@
       </div>
     </div>
 
-    <div
-      id="modal-image"
-      class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-75 transition-opacity duration-300"
-    >
+    <div id="modal-image" class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-75 transition-opacity duration-300">
       <div class="relative max-w-full max-h-full h-full w-full">
-        <button id="modal-close" class="absolute top-4 right-4 text-white text-3xl font-bold hover:text-gray-300 transition-colors z-50">
-          &times;
-        </button>
-        <img
-          src="image/Kurikulum-sd.svg"
-          alt="Tampilan Kurikulum SD Penuh"
-          class="w-full h-full object-contain rounded-none lg:rounded-2xl lg:shadow-2xl"
-        />
+        <button id="modal-close" class="absolute top-4 right-4 text-white text-3xl font-bold hover:text-gray-300 transition-colors z-50">&times;</button>
+        <img src="image/Kurikulum-sd.svg" alt="Tampilan Kurikulum SD Penuh" class="w-full h-full object-contain rounded-none lg:rounded-2xl lg:shadow-2xl" />
       </div>
     </div>
 
@@ -596,11 +498,7 @@
     </div>
 
     <!-- Statistics Section -->
-    <section
-      id="statistics"
-      class="relative w-full overflow-hidden bg-cover bg-center"
-      style="background-image: url('/image/gedungSd.jpg')"
-    >
+    <section id="statistics" class="relative w-full overflow-hidden bg-cover bg-center" style="background-image: url('/image/gedungSd.jpg')">
       <div class="absolute inset-0 bg-black opacity-60 z-0"></div>
 
       <div class="max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8 lg:py-20 relative z-10">
@@ -665,14 +563,9 @@
           </div>
 
           <div class="grid md:grid-cols-2 gap-8">
-            <div
-              class="bg-gradient-to-br from-primary/10 to-blue-100 p-6 md:p-8 rounded-2xl shadow-xl border border-primary/20 h-full"
-              data-aos="fade-up"
-            >
+            <div class="bg-gradient-to-br from-primary/10 to-blue-100 p-6 md:p-8 rounded-2xl shadow-xl border border-primary/20 h-full" data-aos="fade-up">
               <div class="flex items-center mb-4">
-                <div
-                  class="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-br from-primary to-green-400 text-white mr-4 shadow-md"
-                >
+                <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-br from-primary to-green-400 text-white mr-4 shadow-md">
                   <i class="fas fa-file-alt text-xl"></i>
                 </div>
                 <h3 class="text-2xl font-bold text-primary">Persyaratan</h3>
@@ -690,20 +583,14 @@
               data-aos-delay="200"
             >
               <div class="flex items-center mb-4">
-                <div
-                  class="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-br from-primary to-green-400 text-white mr-4 shadow-md"
-                >
+                <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-br from-primary to-green-400 text-white mr-4 shadow-md">
                   <i class="fas fa-clipboard-list text-xl"></i>
                 </div>
                 <h4 class="text-2xl font-bold text-secondary">Administrasi</h4>
               </div>
               <ul class="space-y-3 text-gray-700 text-base">
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-primary mt-1 mr-3"></i> Fotokopi Akta Kelahiran (**2 lembar**)
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-check-circle text-primary mt-1 mr-3"></i> Fotokopi Kartu Keluarga (**2 lembar**)
-                </li>
+                <li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-3"></i> Fotokopi Akta Kelahiran (**2 lembar**)</li>
+                <li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-3"></i> Fotokopi Kartu Keluarga (**2 lembar**)</li>
                 <li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-3"></i> Fotokopi KTP Orang Tua</li>
                 <li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-3"></i> Pas foto 2x3 (2), 3x4 (2)</li>
                 <li class="flex items-start"><i class="fas fa-check-circle text-primary mt-1 mr-3"></i> Ijazah TK (Jika Ada)</li>
@@ -820,9 +707,7 @@
         <div class="text-center mb-16">
           <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Hubungi Kami</h2>
           <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
-          <p class="text-lg text-text max-w-3xl mx-auto">
-            Kami siap menjawab pertanyaan Anda dan memberikan informasi lebih lanjut tentang SD Alam Selfa.
-          </p>
+          <p class="text-lg text-text max-w-3xl mx-auto">Kami siap menjawab pertanyaan Anda dan memberikan informasi lebih lanjut tentang SD Alam Selfa.</p>
         </div>
 
         <div class="flex flex-col lg:flex-row gap-12">
@@ -941,13 +826,9 @@
             <h3 class="text-xl font-bold font-sans mb-4">Sayf El Falah</h3>
             <p class="mb-4">Sekolah unggulan dengan pendidikan terpadu yang mengintegrasikan ilmu pengetahuan dan nilai-nilai keislaman.</p>
             <div class="flex space-x-4">
-              <a href="https://www.instagram.com/salamselfa/" class="text-white hover:text-primary transition"
-                ><i class="fab fa-instagram"></i
-              ></a>
+              <a href="https://www.instagram.com/salamselfa/" class="text-white hover:text-primary transition"><i class="fab fa-instagram"></i></a>
               <a href="https://wa.link/sn6e7e" class="text-white hover:text-primary transition"><i class="fab fa-whatsapp"></i></a>
-              <a href="https://www.youtube.com/@SekolahAlamSelfa" class="text-white hover:text-primary transition"
-                ><i class="fab fa-youtube"></i
-              ></a>
+              <a href="https://www.youtube.com/@SekolahAlamSelfa" class="text-white hover:text-primary transition"><i class="fab fa-youtube"></i></a>
             </div>
           </div>
 

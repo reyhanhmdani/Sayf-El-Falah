@@ -3,6 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+      fbq("init", "844377491682578");
+      fbq("track", "PageView");
+    </script>
+    <noscript><img height="1" width="1" style="display: none" src="https://www.facebook.com/tr?id=844377491682578&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
     <title>Sekolah Sayf El Falah</title>
     <!-- AOS Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -29,10 +52,7 @@
           <a href="index" class="nav-link text-white hover:text-primary transition">Home</a>
           <a href="#about" class="nav-link text-white hover:text-primary transition">About Us</a>
           <div class="relative group">
-            <button
-              class="nav-link text-white hover:text-primary transition focus:outline-none flex items-center"
-              id="dropdown-btn-desktop"
-            >
+            <button class="nav-link text-white hover:text-primary transition focus:outline-none flex items-center" id="dropdown-btn-desktop">
               Program Selfa <i class="fas fa-chevron-down ml-2 text-xs transition-transform duration-300"></i>
             </button>
             <div
@@ -60,10 +80,7 @@
         <a href="index" class="block py-2 text-secondary hover:text-primary">Home</a>
         <a href="#about" class="block py-2 text-secondary hover:text-primary">About Us</a>
 
-        <button
-          class="block w-full text-left py-2 text-secondary hover:text-primary transition focus:outline-none"
-          id="dropdown-btn-mobile"
-        >
+        <button class="block w-full text-left py-2 text-secondary hover:text-primary transition focus:outline-none" id="dropdown-btn-mobile">
           Program Selfa <i class="fas fa-chevron-down ml-2 text-xs transition-transform duration-300"></i>
         </button>
         <div id="dropdown-menu-mobile" class="hidden pl-4 py-2 space-y-2">
@@ -107,9 +124,9 @@
               <h3 class="text-2xl font-bold font-heading text-secondary">Visi Kami</h3>
             </div>
             <p class="text-gray-700 text-base leading-relaxed">
-              Membangun lingkungan pembelajaran paling ideal yang Islami, mutakhir, menyenangkan, dan terintegrasi dengan aktivitas
-              kehidupan. Kami ingin membantu setiap anak tumbuh menjadi manusia utuh yang mampu menjadi pemimpin dan rahmat bagi dunia,
-              sesuai dengan ajaran Allah Ta’ala dan Rasulullah shallallahu alaihi wa sallam.
+              Membangun lingkungan pembelajaran paling ideal yang Islami, mutakhir, menyenangkan, dan terintegrasi dengan aktivitas kehidupan. Kami ingin
+              membantu setiap anak tumbuh menjadi manusia utuh yang mampu menjadi pemimpin dan rahmat bagi dunia, sesuai dengan ajaran Allah Ta’ala dan
+              Rasulullah shallallahu alaihi wa sallam.
             </p>
           </div>
 
@@ -139,15 +156,15 @@
               <li class="flex items-start">
                 <i class="fas fa-check text-primary mt-1 mr-3 flex-shrink-0"></i>
                 <span
-                  >Menyediakan metode pembelajaran yang komprehensif untuk mengembangkan seluruh aspek dasar manusia, meliputi akal, rasa,
-                  fisik, mental, dan sosial.</span
+                  >Menyediakan metode pembelajaran yang komprehensif untuk mengembangkan seluruh aspek dasar manusia, meliputi akal, rasa, fisik, mental, dan
+                  sosial.</span
                 >
               </li>
               <li class="flex items-start">
                 <i class="fas fa-check text-primary mt-1 mr-3 flex-shrink-0"></i>
                 <span
-                  >Menjadi lingkungan tumbuh terbaik bagi anak-anak di masa keemasannya dengan memberikan beragam pengalaman kehidupan yang
-                  dibutuhkan di masa depan.</span
+                  >Menjadi lingkungan tumbuh terbaik bagi anak-anak di masa keemasannya dengan memberikan beragam pengalaman kehidupan yang dibutuhkan di masa
+                  depan.</span
                 >
               </li>
             </ul>
@@ -165,9 +182,7 @@
     <!-- About Us Section -->
     <section id="about" class="py-20">
       <div class="container mx-auto px-6">
-        <h2 class="text-3xl md:text-4xl font-bold font-heading text-center text-secondary mb-16" data-aos="fade-up">
-          Tentang Sekolah Sayf El Falah
-        </h2>
+        <h2 class="text-3xl md:text-4xl font-bold font-heading text-center text-secondary mb-16" data-aos="fade-up">Tentang Sekolah Sayf El Falah</h2>
 
         <div class="grid lg:grid-cols-2 gap-12 items-center">
           <div data-aos="fade-right">
@@ -177,9 +192,9 @@
           <div data-aos="fade-left">
             <h3 class="text-2xl font-bold font-heading text-secondary mb-4">Sejarah Singkat</h3>
             <p class="text-gray-700 mb-6">
-              Sayf El Falah adalah sebuah yayasan pendidikan yang didirikan di atas keyakinan kuat bahwa setiap anak memiliki potensi unik
-              yang harus dikembangkan sesuai dengan fitrahnya. Kami tidak hanya berkomitmen pada pendidikan formal, tetapi juga berfokus
-              pada pembentukan karakter, kepemimpinan, dan kecintaan pada ilmu pengetahuan.
+              Sayf El Falah adalah sebuah yayasan pendidikan yang didirikan di atas keyakinan kuat bahwa setiap anak memiliki potensi unik yang harus
+              dikembangkan sesuai dengan fitrahnya. Kami tidak hanya berkomitmen pada pendidikan formal, tetapi juga berfokus pada pembentukan karakter,
+              kepemimpinan, dan kecintaan pada ilmu pengetahuan.
             </p>
 
             <h3 class="text-2xl font-bold font-heading text-secondary mb-4">Keunggulan Kami</h3>
@@ -219,8 +234,8 @@
           <h2 class="text-3xl md:text-4xl font-bold font-heading text-secondary mb-4" data-aos="fade-up">Program Sayf El Falah</h2>
           <div class="w-20 h-1 bg-primary mx-auto mb-6" data-aos="fade-up" data-aos-delay="100"></div>
           <p class="text-lg text-gray-700 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
-            Sayf El Falah adalah yayasan pendidikan yang berdedikasi untuk menciptakan generasi terbaik melalui kurikulum yang terintegrasi
-            dan berfokus pada fitrah anak.
+            Sayf El Falah adalah yayasan pendidikan yang berdedikasi untuk menciptakan generasi terbaik melalui kurikulum yang terintegrasi dan berfokus pada
+            fitrah anak.
           </p>
         </div>
 
@@ -239,26 +254,18 @@
             <div class="relative z-10 mx-auto max-w-md">
               <!-- icon + title -->
               <div class="flex items-center gap-4">
-                <span
-                  class="grid h-20 w-20 place-items-center rounded-full border border-primary bg-white transition-all duration-300 group-hover:bg-white"
-                >
+                <span class="grid h-20 w-20 place-items-center rounded-full border border-primary bg-white transition-all duration-300 group-hover:bg-white">
                   <img src="/image/logo-tk.png" alt="Logo KB & TK Selfa" class="h-10 w-10 transition-all group-hover:scale-110" />
                 </span>
-                <h3 class="text-xl font-bold text-secondary group-hover:text-white transition-colors group-[.hover]:text-white">
-                  KB & TK Selfa
-                </h3>
+                <h3 class="text-xl font-bold text-secondary group-hover:text-white transition-colors group-[.hover]:text-white">KB & TK Selfa</h3>
               </div>
               <!-- deskripsi -->
-              <div
-                class="space-y-6 pt-5 text-base leading-7 text-gray-600 transition-all duration-300 group-hover:text-white/90 group-[.hover]:text-white/90"
-              >
+              <div class="space-y-6 pt-5 text-base leading-7 text-gray-600 transition-all duration-300 group-hover:text-white/90 group-[.hover]:text-white/90">
                 <p>Membangun fondasi Islami dan karakter anak melalui pembelajaran yang menyenangkan dan berfokus pada fitrah.</p>
               </div>
               <div class="pt-5 text-base font-semibold leading-7">
                 <p>
-                  <span class="text-primary transition-all duration-300 group-hover:text-white group-[.hover]:text-white"
-                    >Lihat Program →</span
-                  >
+                  <span class="text-primary transition-all duration-300 group-hover:text-white group-[.hover]:text-white">Lihat Program →</span>
                 </p>
               </div>
             </div>
@@ -278,25 +285,17 @@
             </span>
             <div class="relative z-10 mx-auto max-w-md">
               <div class="flex items-center gap-4">
-                <span
-                  class="grid h-20 w-20 place-items-center rounded-full border border-primary bg-white transition-all duration-300 group-hover:bg-white"
-                >
+                <span class="grid h-20 w-20 place-items-center rounded-full border border-primary bg-white transition-all duration-300 group-hover:bg-white">
                   <img src="/image/icon-sd-selfa.png" alt="Logo SD Alam Selfa" class="h-10 w-10 transition-all group-hover:scale-110" />
                 </span>
-                <h3 class="text-sm md:text-lg font-bold text-secondary group-hover:text-white transition-colors group-[.hover]:text-white">
-                  SD Alam Selfa
-                </h3>
+                <h3 class="text-sm md:text-lg font-bold text-secondary group-hover:text-white transition-colors group-[.hover]:text-white">SD Alam Selfa</h3>
               </div>
-              <div
-                class="space-y-6 pt-5 text-base leading-7 text-gray-600 transition-all duration-300 group-hover:text-white/90 group-[.hover]:text-white/90"
-              >
+              <div class="space-y-6 pt-5 text-base leading-7 text-gray-600 transition-all duration-300 group-hover:text-white/90 group-[.hover]:text-white/90">
                 <p>Pembelajaran berbasis alam untuk mengembangkan akal dan fisik anak secara interaktif dan holistik.</p>
               </div>
               <div class="pt-5 text-base font-semibold leading-7">
                 <p>
-                  <span class="text-primary transition-all duration-300 group-hover:text-white group-[.hover]:text-white"
-                    >Lihat Program →</span
-                  >
+                  <span class="text-primary transition-all duration-300 group-hover:text-white group-[.hover]:text-white">Lihat Program →</span>
                 </p>
               </div>
             </div>
@@ -316,25 +315,17 @@
             </span>
             <div class="relative z-10 mx-auto max-w-md">
               <div class="flex items-center gap-4">
-                <span
-                  class="grid h-20 w-20 place-items-center rounded-full border border-primary bg-white transition-all duration-300 group-hover:bg-white"
-                >
+                <span class="grid h-20 w-20 place-items-center rounded-full border border-primary bg-white transition-all duration-300 group-hover:bg-white">
                   <img src="/image/logo-ponpes.png" alt="Logo SD Alam Selfa" class="h-10 w-10 transition-all group-hover:scale-110" />
                 </span>
-                <h3 class="text-xl font-bold text-secondary group-hover:text-white transition-colors group-[.hover]:text-white">
-                  Ponpes Selfa
-                </h3>
+                <h3 class="text-xl font-bold text-secondary group-hover:text-white transition-colors group-[.hover]:text-white">Ponpes Selfa</h3>
               </div>
-              <div
-                class="space-y-6 pt-5 text-base leading-7 text-gray-600 transition-all duration-300 group-hover:text-white/90 group-[.hover]:text-white/90"
-              >
+              <div class="space-y-6 pt-5 text-base leading-7 text-gray-600 transition-all duration-300 group-hover:text-white/90 group-[.hover]:text-white/90">
                 <p>Mencetak generasi pemimpin yang menguasai ilmu agama dan modern secara seimbang untuk masa depan.</p>
               </div>
               <div class="pt-5 text-base font-semibold leading-7">
                 <p>
-                  <span class="text-primary transition-all duration-300 group-hover:text-white group-[.hover]:text-white"
-                    >Lihat Program →</span
-                  >
+                  <span class="text-primary transition-all duration-300 group-hover:text-white group-[.hover]:text-white">Lihat Program →</span>
                 </p>
               </div>
             </div>
@@ -433,9 +424,7 @@
         <div class="text-center mb-16">
           <h2 class="text-3xl md:text-4xl font-bold text-secondary mb-4">Hubungi Kami</h2>
           <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
-          <p class="text-lg text-text max-w-3xl mx-auto">
-            Kami siap menjawab pertanyaan Anda dan memberikan informasi lebih lanjut tentang KB & TK Selfa.
-          </p>
+          <p class="text-lg text-text max-w-3xl mx-auto">Kami siap menjawab pertanyaan Anda dan memberikan informasi lebih lanjut tentang KB & TK Selfa.</p>
         </div>
 
         <div class="flex flex-col lg:flex-row gap-12">
