@@ -3,6 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="SD Alam Sayf El Falah Klaten. Sekolah dasar berbasis alam yang membentuk karakter Islami, kemandirian, dan kepemimpinan." />
+    <meta name="keywords" content="SD Alam Klaten, Sekolah Alam Klaten, SD Islam Klaten, Sayf El Falah, Pendidikan Karakter, Sekolah Alam Terbaik Klaten" />
+    <link rel="canonical" href="https://sayfelfalah.sch.id/sd.html" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sayfelfalah.sch.id/sd.html" />
+    <meta property="og:title" content="SD Alam Sayf El Falah - Berkarakter, Cerdas, dan Mandiri" />
+    <meta property="og:description" content="Membangun generasi pemimpin masa depan dengan kurikulum berbasis alam dan Al-Qur'an." />
+    <meta property="og:image" content="https://sayfelfalah.sch.id/image/gedungSd.jpg" />
+
     <!-- Meta Pixel Code -->
     <script>
       !(function (f, b, e, v, n, t, s) {
@@ -52,7 +65,7 @@
         </div>
 
         <div class="hidden md:flex space-x-8">
-          <a href="index" class="nav-link text-white hover:text-primary transition">Home</a>
+          <a href="index.html" class="nav-link text-white hover:text-primary transition">Home</a>
           <a href="#about" class="nav-link text-white hover:text-primary transition">About Us</a>
           <div class="relative group">
             <button class="nav-link text-white hover:text-primary transition focus:outline-none flex items-center" id="dropdown-btn-desktop">
@@ -62,9 +75,9 @@
               id="dropdown-menu-desktop"
               class="absolute left-0 mt-2 w-40 bg-white rounded-md shadow-lg py-2 z-20 opacity-0 -translate-y-4 pointer-events-none transition-all duration-300"
             >
-              <a href="KbTK" class="block px-4 py-2 text-sm text-secondary hover:bg-gray-100 hover:text-primary">KB & TK Selfa</a>
-              <a href="sd" class="block px-4 py-2 text-sm text-secondary hover:bg-gray-100 hover:text-primary">SD Alam Selfa</a>
-              <a href="ponpes" class="block px-4 py-2 text-sm text-secondary hover:bg-gray-100 hover:text-primary">Pondok Pesantren</a>
+              <a href="KbTK.html" class="block px-4 py-2 text-sm text-secondary hover:bg-gray-100 hover:text-primary">KB & TK Selfa</a>
+              <a href="sd.html" class="block px-4 py-2 text-sm text-secondary hover:bg-gray-100 hover:text-primary">SD Alam Selfa</a>
+              <a href="ponpes.html" class="block px-4 py-2 text-sm text-secondary hover:bg-gray-100 hover:text-primary">Pondok Pesantren</a>
             </div>
           </div>
         </div>
@@ -80,28 +93,36 @@
         id="mobile-menu"
         class="md:hidden bg-white py-4 px-6 absolute top-full left-0 w-full shadow-lg transition-all duration-300 ease-in-out opacity-0 -translate-y-4 pointer-events-none"
       >
-        <a href="index" class="block py-2 text-secondary hover:text-primary">Home</a>
+        <a href="index.html" class="block py-2 text-secondary hover:text-primary">Home</a>
         <a href="#about" class="block py-2 text-secondary hover:text-primary">About Us</a>
 
         <button class="block w-full text-left py-2 text-secondary hover:text-primary transition focus:outline-none" id="dropdown-btn-mobile">
           Program Selfa <i class="fas fa-chevron-down ml-2 text-xs transition-transform duration-300"></i>
         </button>
         <div id="dropdown-menu-mobile" class="hidden pl-4 py-2 space-y-2">
-          <a href="KbTK" class="block text-secondary hover:text-primary">KB & TK Selfa</a>
-          <a href="sd" class="block text-secondary hover:text-primary">SD Alam Selfa</a>
-          <a href="ponpes" class="block text-secondary hover:text-primary">Pondok Pesantren</a>
+          <a href="KbTK.html" class="block text-secondary hover:text-primary">KB & TK Selfa</a>
+          <a href="sd.html" class="block text-secondary hover:text-primary">SD Alam Selfa</a>
+          <a href="ponpes.html" class="block text-secondary hover:text-primary">Pondok Pesantren</a>
         </div>
       </div>
     </nav>
 
     <!-- Hero Section -->
     <header class="relative w-full h-screen flex items-center justify-center">
-      <div class="absolute inset-0 z-0 bg-cover bg-center bg-[url('/image/gedungSdPotrait.jpg')] lg:bg-[url('/image/gedungSd.jpg')]"></div>
+      <picture class="absolute inset-0 z-0">
+        <source media="(min-width: 1024px)" srcset="/image/gedungSd.jpg">
+        <img
+          src="/image/gedungSdPotrait.jpg"
+          alt="Gedung SD Alam Sayf El Falah"
+          class="w-full h-full object-cover object-center"
+          fetchpriority="high"
+        />
+      </picture>
 
       <div class="absolute inset-0 z-10 bg-black opacity-60"></div>
 
       <div class="relative z-20 container mx-auto px-6 text-center text-white" data-aos="fade-up">
-        <h1 class="text-4xl md:text-6xl font-bold font-heading mb-4">Selamat Datang di SD Alam</h1>
+        <div class="text-4xl md:text-6xl font-bold font-heading mb-4">Selamat Datang di SD Alam</div>
         <h1 class="text-5xl md:text-8xl font-bold font-sans mb-4 text-primary">Sayf El Falah</h1>
         <p class="text-xl md:text-2xl mb-8">Membentuk generasi cerdas, kreatif, dan berakhlak mulia melalui pendidikan usia dini yang menyenangkan.</p>
       </div>
@@ -835,7 +856,7 @@
           <div>
             <h3 class="text-xl font-bold font-heading mb-4">Tautan Cepat</h3>
             <ul class="space-y-2">
-              <li><a href="#" class="hover:text-primary transition">Home</a></li>
+              <li><a href="index.html" class="hover:text-primary transition">Home</a></li>
               <li><a href="#visimisi" class="hover:text-primary transition">Visi Misi</a></li>
               <li><a href="#about" class="hover:text-primary transition">Tentang Kami</a></li>
               <li><a href="#gallery" class="hover:text-primary transition">Galeri</a></li>
@@ -845,9 +866,9 @@
           <div>
             <h3 class="text-xl font-bold font-heading mb-4">Program</h3>
             <ul class="space-y-2">
-              <li><a href="KbTK" class="hover:text-primary transition">KB TK</a></li>
-              <li><a href="sd" class="hover:text-primary transition">SD</a></li>
-              <li><a href="ponpes" class="hover:text-primary transition">Pondok Pesantren</a></li>
+              <li><a href="KbTK.html" class="hover:text-primary transition">KB TK</a></li>
+              <li><a href="sd.html" class="hover:text-primary transition">SD</a></li>
+              <li><a href="ponpes.html" class="hover:text-primary transition">Pondok Pesantren</a></li>
             </ul>
           </div>
 
