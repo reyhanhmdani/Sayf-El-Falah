@@ -148,12 +148,15 @@ autoHoverCards("#program-ponpes", "center");
 
 // GALLERY
 document.addEventListener("DOMContentLoaded", () => {
-  const galleryItems = document.querySelectorAll(".gallery-item img");
   const lightbox = document.getElementById("lightbox");
+  if (!lightbox) return; // Exit if lightbox doesn't exist
+
+  const galleryItems = document.querySelectorAll(".gallery-item img");
   const lightboxImage = document.getElementById("lightboxImage");
   const closeBtn = document.getElementById("closeLightbox");
   const prevBtn = document.getElementById("prevImage");
   const nextBtn = document.getElementById("nextImage");
+  const lightboxThumbnails = document.getElementById("lightboxThumbnails");
 
   let currentIndex = 0;
 
@@ -163,6 +166,7 @@ document.addEventListener("DOMContentLoaded", () => {
     lightboxImage.src = galleryItems[currentIndex].src;
     lightbox.classList.remove("hidden");
     lightbox.classList.add("flex");
+    updateThumbnails();
   }
 
   // tutup lightbox
@@ -175,12 +179,46 @@ document.addEventListener("DOMContentLoaded", () => {
   function showPrev() {
     currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
     lightboxImage.src = galleryItems[currentIndex].src;
+    updateThumbnails();
   }
 
   // gambar selanjutnya
   function showNext() {
     currentIndex = (currentIndex + 1) % galleryItems.length;
     lightboxImage.src = galleryItems[currentIndex].src;
+    updateThumbnails();
+  }
+
+  // Update thumbnails highlight
+  function updateThumbnails() {
+    if (!lightboxThumbnails) return;
+    const thumbnails = lightboxThumbnails.querySelectorAll("img");
+    thumbnails.forEach((thumb, idx) => {
+        if (idx === currentIndex) {
+            thumb.classList.add("border-primary", "border-2");
+            thumb.classList.remove("opacity-60");
+        } else {
+            thumb.classList.remove("border-primary", "border-2");
+            thumb.classList.add("opacity-60");
+        }
+    });
+    
+    // Scroll thumbnail active ke view
+    if(thumbnails[currentIndex]) {
+        thumbnails[currentIndex].scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+    }
+  }
+
+  // Generate Thumbnails
+  if (lightboxThumbnails && galleryItems.length > 0) {
+      lightboxThumbnails.innerHTML = ""; // Clear existing
+      galleryItems.forEach((item, index) => {
+          const thumb = document.createElement("img");
+          thumb.src = item.src;
+          thumb.className = "h-16 w-24 object-cover rounded cursor-pointer transition-opacity duration-300 opacity-60 flex-shrink-0";
+          thumb.addEventListener("click", () => openLightbox(index));
+          lightboxThumbnails.appendChild(thumb);
+      });
   }
 
   // klik gambar gallery
@@ -189,11 +227,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // tombol close
-  closeBtn.addEventListener("click", closeLightbox);
+  if(closeBtn) closeBtn.addEventListener("click", closeLightbox);
 
   // tombol prev/next
-  prevBtn.addEventListener("click", showPrev);
-  nextBtn.addEventListener("click", showNext);
+  if(prevBtn) prevBtn.addEventListener("click", showPrev);
+  if(nextBtn) nextBtn.addEventListener("click", showNext);
 
   // tombol keyboard
   document.addEventListener("keydown", (e) => {
@@ -212,34 +250,43 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // klik gambar Kurikulum SD
 const thumbnailContainer = document.getElementById("thumbnail-trigger");
-const modal = document.getElementById("modal-image");
-const modalImage = modal.querySelector("img");
-const closeButton = document.getElementById("modal-close");
+if (thumbnailContainer) {
+    const modal = document.getElementById("modal-image");
+    const modalImage = modal ? modal.querySelector("img") : null;
+    const closeButton = document.getElementById("modal-close");
 
-function openModal() {
-  // Dapatkan URL gambar yang saat ini ditampilkan oleh browser
-  const currentSrc = thumbnailContainer.querySelector("img").currentSrc;
+    function openModal() {
+      // Dapatkan URL gambar yang saat ini ditampilkan oleh browser
+      const img = thumbnailContainer.querySelector("img");
+      const currentSrc = img.currentSrc || img.src;
 
-  // Atur URL gambar modal sesuai dengan gambar yang sedang ditampilkan
-  modalImage.src = currentSrc;
+      // Atur URL gambar modal sesuai dengan gambar yang sedang ditampilkan
+      if (modalImage) modalImage.src = currentSrc;
 
-  modal.classList.remove("hidden");
-  modal.classList.add("flex");
-  document.body.style.overflow = "hidden";
+      if (modal) {
+          modal.classList.remove("hidden");
+          modal.classList.add("flex");
+          document.body.style.overflow = "hidden";
+      }
+    }
+
+    function closeModal() {
+      if (modal) {
+          modal.classList.remove("flex");
+          modal.classList.add("hidden");
+      }
+      document.body.style.overflow = "auto";
+      if (modalImage) modalImage.src = ""; // Kosongkan URL gambar saat ditutup
+    }
+
+    thumbnailContainer.addEventListener("click", openModal);
+    if (closeButton) closeButton.addEventListener("click", closeModal);
+
+    if (modal) {
+        modal.addEventListener("click", (e) => {
+          if (e.target === modal) {
+            closeModal();
+          }
+        });
+    }
 }
-
-function closeModal() {
-  modal.classList.remove("flex");
-  modal.classList.add("hidden");
-  document.body.style.overflow = "auto";
-  modalImage.src = ""; // Kosongkan URL gambar saat ditutup
-}
-
-thumbnailContainer.addEventListener("click", openModal);
-closeButton.addEventListener("click", closeModal);
-
-modal.addEventListener("click", (e) => {
-  if (e.target === modal) {
-    closeModal();
-  }
-});
