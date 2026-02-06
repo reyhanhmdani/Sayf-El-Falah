@@ -27,14 +27,20 @@ document.getElementById("menu-btn").addEventListener("click", function (event) {
 });
 
 // =======================
-// NAVBAR SCROLL EFFECT
+// NAVBAR SCROLL EFFECT (GLASSMORPHISM)
 // =======================
 window.addEventListener("scroll", function () {
   const navbar = document.querySelector(".navbar");
   if (window.scrollY > 50) {
-    navbar.classList.add("scrolled");
+    // Add Glassmorphism (Dark Blue/Secondary with Blur)
+    navbar.classList.add("bg-secondary/90", "backdrop-blur-md", "shadow-lg");
+    navbar.classList.remove("py-4");
+    navbar.classList.add("py-2");
   } else {
-    navbar.classList.remove("scrolled");
+    // Transparent State
+    navbar.classList.remove("bg-secondary/90", "backdrop-blur-md", "shadow-lg");
+    navbar.classList.add("py-4");
+    navbar.classList.remove("py-2");
   }
 });
 
